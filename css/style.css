@@ -35,8 +35,7 @@ input {
 
 .banner {
     line-height: 30px;
-    margin: 0 20px;
-    padding: 3px 56px;
+    margin-left: 85px;
 }
 
 .content {
@@ -221,19 +220,31 @@ footer .right {
     }
 }
 
+.headersIcon {
+    float: right;
+    color: black;
+    font-size: .8em;
+}
+
 @media (max-width: 530px) {
     h1 {
         margin: 0px;
         padding: 10px;
     }
-}
 
-.menu-btn + input[type="checkbox"] {
-    display: none;
-}
+    .img img {
+        display: none;
+    }
 
-.menu-btn + input[type="checkbox"]:checked ~ .nav1,
-.nav1 li,
-.nav1 li ul li {
-    display: block;
+    main {
+        padding 0 10px;
+    }
+
+    .headers {
+        font-size: 1.5em
+    }
+
+    .headersIcon {
+        display: none;
+    }
 }
