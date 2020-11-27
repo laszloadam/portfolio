@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html lang="hu">
+<head>
+	<title>Kontakt</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+table{
+	margin-top:40px;
+	}
+.profile-image{
+	margin-top:30px;
+	width:320px;
+	height: 380px;
+	border:none
+	}
+.flexbox {
+	display: grid;
+	grid-template-columns: 0fr 1fr;
+	grid-template-rows: 1fr;
+	gap: 0px 0px;
+	grid-template-areas:"contactLeft contactRight";
+}
+.contactRight {
+	grid-area: contactRight;
+    min-height: 350px;
+	border: 3px solid var(--mainColor);
+	margin: 40px;
+    padding: 20px;
+	text-align:right;
+}
+.contactLeft { grid-area: contactLeft;}
+input, textarea {
+	resize: none;
+	overflow:hidden;
+	background:none;
+	color: var(--mainColor);
+	border: 1px solid var(--mainColor);
+	
+}
+.contactContent {
+	width:380px;
+}
+.contactContent button {
+	float:right;
+	width:auto;
+	padding:0;
+	margin:20px;
+	
+}
+input {
+	padding: 5px;
+	width:50%;
+    margin-bottom:15px;
+}
+@media (max-width:1180px) {
+    .flexbox {
+        display: block;
+    }
+
+    .profile-image {
+        display: none;
+    }
+    .contactLeft {
+        border-bottom: 3px solid var(--mainColor);
+    }
+    .contactRight {
+        border:none;
+        margin:0;
+    }
+}
+tr td:first-child {padding-right:25px;}
+tr {line-height: 25px;}
+tr td a {color:var(--mainColor);}
+	</style>
+</head>
+<body>
+<h1 class="headers">[ Kapcsolat ]
+<div style="float:right; color:black; font-size: 21px;">
+	         - ☐ ✖
+</div>
+</h1>
+	<div class="flexbox">	
+		<div class="contactLeft">
+			<table>
+				<tr>
+					<td>Név:</td>
+					<td>László Ádám</td>
+				</tr>
+				<tr>
+					<td>E-mail:</td>
+					<td>laszloadam08@gmail.com</td>
+				</tr>
+				<tr>
+					<td>LinkedIn:</td>
+					<td><a href="https://www.linkedin.com/in/lászló-ádám-2494b3129">Profilom</a></td>
+				</tr>
+				<tr>
+					<td>Facebook:</td>
+					<td><a href="https://www.facebook.com/laszloadam08">/laszloadam08</a></td>
+				</tr>
+                <tr>
+                    <td>Mobil:</td>
+                    <td>Rejtett</td>
+                </tr>
+			</table>
+			<iframe class="profile-image" src="inc/ascii-art.html">
+				
+			</iframe>
+		</div>
+		<div class="contactRight">
+		<form class="contactContent" action="https://formspree.io/f/mzbkagve" method="POST">
+			
+			<div>
+				<label for="name">Teljes név: </label>
+				<input type="text" id="name" name="name">
+			</div>
+			<div>
+				<label for="mail">Feladó e-mail címe: </label>
+				<input type="email" id="mail" name="mail" required>
+			</div>
+			<div>
+				<label for="targy">Tárgy: </label>
+				<input type="text" id="targy" name="targy">
+			</div>
+			<div>
+				<label style="float:left"for="message">Üzenet: </label>
+				<textarea id="message"name="Text1" cols="40" rows="15"></textarea>
+			</div>
+			<button type="reset">[ Reset ]</button>			
+			<button type="submit">[ Küldés ]</button>
+		</form>
+		</div>
+	</div>
+</body>
+</html>

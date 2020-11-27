@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="hu">
+<head>
+	<title>Referencia munkák</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		.box-wrapper {
+			display:flex;
+			flex-flow: row wrap;
+			clear:both;
+			max-height: 660px;
+			overflow: auto;
+			margin-right: -20px;
+			margin-top: 20px;
+		}
+		.box {
+			flex: 1;
+			margin: 10px;
+			min-width: 185px;
+		}
+		img {
+			max-width: 200px;
+			max-height: 100px;
+			border-radius:10px;
+		}
+		h2 {min-height:55px}
+		.box-content p {min-height:60px;}
+		.btn {
+			display:inline-block;
+			padding: .5rem 1rem;
+			text-decoration: none;
+			background: var(--mainColor);
+			color:black;
+			box-shadow: 0 0 5px var(--mainColor);
+			margin: 0px auto;
+		}
+		@media (max-width: 530px) {
+			.box {
+				min-width: 150px;
+			}
+		}
+	</style>
+
+</head>
+<body>
+	<h1 class="headers">[ Referencia munkáim ]
+	<div style="float:right; color:black; font-size: 21px;">
+				 - ☐ ✖
+	</div>
+	</h1>
+	<div class="box-wrapper">
+		<div class="box">
+			<img src="pics/canvas.png" alt="Canvas">
+			<div class="box-content">
+				<h2>Canvas-gyár</h2>
+				<p>Gyakorlások</p>
+				<a class="btn" href="">Részletek</a>
+			</div>
+		</div>
+		<div class="box">
+			<img src="pics/mars.png" alt="Kalkulátor">
+			<div class="box-content">
+				<h2>Üzemanyag kalkulátor</h2>
+				<p>Egy egyszerű üzemanyag kalkulátor</p>
+				<a class="btn" href="">Részletek</a>
+			</div>
+		</div>
+		<div class="box">
+			<img src="pics/ac.png" alt="Assassin's Creed">
+			<div class="box-content">
+				<h2>Assassin's Creed</h2>
+				<p>Egy "AC" témájú gyakorlóoldal</p>
+				<a class="btn" href="">Részletek</a>
+			</div>
+		</div>
+		<div class="box">
+			<img src="pics/avp.png" alt="avp">
+			<div class="box-content">
+				<h2>Alien's vs. Predator</h2>
+				<p>Egy másik rajongói gyakorló oldalam</p>
+				<a class="btn" href="">Részletek</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
