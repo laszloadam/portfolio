@@ -4,25 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="László Ádám">
+	<meta name="description" content="my portfolio page">
     <title>Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
-	<script src="jquery.v3.5.1.js"></script>
-	<script src="js/main.js"></script>
-    <script src="js/clock.js"></script>
-	<style>
-	</style>
+    <link rel="icon" type="image/png" href="pics/favicon.png">
+	<script src="../jquery.v3.5.1.js"></script>
+	<script src="js/main.js" defer></script>
+    <script src="js/clock.js" defer></script>
+    <script src="js/window.js" defer></script>
+    <script src="js/scripts.js"></script>
 </head>
 
-<body>
+<body onload="startTime()">
     <div class="wrapper">
         <div class="banner">
             <p>Látogató észlelve..<br>
                 * Üdvözöllek a hálózatomon! *
             </p>
         </div>
-        <div class="content">
+        <div id="content" class="content">
             <nav>
-                <div class="menu-btn">
+                <div for="menu" class="menu-btn">
                     MENÜ
                 </div>
 				<button id="main">Magamról</button>
@@ -30,14 +33,23 @@
                 <button id="contact">Kapcsolat</button>
                 <hr>
 				<p class="online">&#9635; Online</p>
-                <button>Beállítások</button>
+                <button id="options" onclick="optOpen()" >Beállítások ⯈</button>
+                <div id="submenu" style="width:0em; height:1em">
+                    <span id="blue" onclick="blue()"></span>
+                    <span id= "red" onclick="red()"></span>
+                    <span id= "green"  onclick="green()"></span>
+                </div>
                 <button>Nyomtatás</button>
                 <button onclick="window.location.href='../index.html'">Kilépés</button>
             </nav>
-            <main>
+            <main id="window">
 				
             </main>
-            <footer onload="startTime()">
+            <div id="error">
+                Tiltott funkció
+            </div>
+            
+            <footer>
                 <div class="left">© Copyright 2020 László Ádám</div>
                 <div class="right">
 
@@ -46,6 +58,7 @@
             </footer>
         </div>
     </div>
+    
 </body>
 
 </html>

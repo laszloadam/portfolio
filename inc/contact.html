@@ -5,103 +5,82 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
-        table{
-            margin-top:40px;
-            }
-        .profile-image{
-            margin-top:30px;
-            width:320px;
-            height: 380px;
-            border:none
-            }
-        .flexbox {
-            display: grid;
-            grid-template-columns: 0fr 1fr;
-            grid-template-rows: 1fr;
-            gap: 0px 0px;
-            grid-template-areas:"contactLeft contactRight";
-        }
-        .contactRight {
-            grid-area: contactRight;
-            min-height: 350px;
-            border: 3px solid var(--mainColor);
-            margin: 40px;
-            padding: 20px;
-            text-align:right;
-        }
-        .contactLeft { grid-area: contactLeft;}
-        input, textarea {
-            resize: none;
-            overflow:hidden;
-            background:none;
-            color: var(--mainColor);
-            border: 1px solid var(--mainColor);
+table{
+	margin-top:40px;
+	}
+.profile-image{
+    color:var(--mainColor);
+    font-size: .65em;
+    line-height: 1.3em;
+	margin-top:30px;
+	width:320px;
+	height: 380px;
+	border:none
+	}
+.flexbox {
+	display: grid;
+	grid-template-columns: 0fr 1fr;
+	grid-template-rows: 1fr;
+	gap: 0px 0px;
+	grid-template-areas:"contactLeft contactRight";
+}
+.contactRight {
+	grid-area: contactRight;
+    min-height: 350px;
+	border: 3px solid var(--mainColor);
+	margin: 40px;
+    padding: 20px;
+	text-align:right;
+}
+.contactLeft { grid-area: contactLeft;}
+input, textarea {
+	resize: none;
+	overflow:hidden;
+	background:none;
+	color: var(--mainColor);
+	border: 1px solid var(--mainColor);
+	
+}
+.contactContent {
+	width:380px;
+}
+.contactContent button {
+	float:right;
+	width:auto;
+	padding:0;
+	margin:20px;
+	
+}
+input {
+	padding: 5px;
+	width:50%;
+    margin-bottom:15px;
+}
+@media (max-width:1180px) {
+    .flexbox {
+        display: block;
+    }
 
-        }
-        .contactContent {
-            width:380px;
-        }
-        .contactContent button {
-            float:right;
-            width:auto;
-            padding:0;
-            margin:20px;
-
-        }
-        input {
-            padding: 5px;
-            width:50%;
-            margin-bottom:15px;
-        }
-        @media (max-width:1180px) {
-            .flexbox {
-                display: block;
-            }
-
-            .profile-image {
-                display: none;
-            }
-            .contactLeft {
-                border-bottom: 3px solid var(--mainColor);
-            }
-            .contactRight {
-                border:none;
-                margin:0;
-            }
-        }
-        tr td:first-child {padding-right:25px;}
-        tr {line-height: 25px;}
-        tr td a {color:var(--mainColor);}
-        .message {
-            display:block;
-        }
-        @media (max-width: 530px) {
-            
-
-            
-
-            form div label,
-            form div input,
-            form div textarea {
-                display: block;
-                text-align: left;
-            }
-
-            .contactRight {
-                text-align: left;
-                padding: 10px 0;
-            }
-
-            .contactContent button {
-                float: left;
-            }
-        }
+    .profile-image {
+        display: none;
+    }
+    .contactLeft {
+        border-bottom: 3px solid var(--mainColor);
+    }
+    .contactRight {
+        border:none;
+        margin:0;
+    }
+}
+tr td:first-child {padding-right:25px;}
+tr {line-height: 25px;}
+tr td a {color:var(--mainColor);}
 	</style>
 </head>
 <body>
 <h1 class="headers">[ Kapcsolat ]
-<div class="headersIcon">
-	         - ☐ ✖
+<div class="winButtons">
+	         <span class="window" onclick="minimal()">-</span><span class="window" onclick="full()">☐</span><span class="window" onclick="closed()">✖</span>
 </div>
 </h1>
 	<div class="flexbox">	
@@ -128,16 +107,44 @@
                     <td>Rejtett</td>
                 </tr>
 			</table>
-			<iframe class="profile-image" src="inc/ascii-art.html">
-				
-			</iframe>
+			
+			<div class="profile-image">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>
+@@@@@@@@@@@@@@@@@@@@(,,,.,,,,,,*&@@@@@@@@@@@@@@@@@@@@@@<br>
+@@@@@@@@@@@@@@@&*,,,,,......,.,,,.,&@@@@@@@@@@@@@@@@@@@<br>
+@@@@@@@@@@@@%*,,.,......,,........,../@@@@@@@@@@@@@@@@@<br>
+@@@@@@@@@@@/,,,,,,.,,,,..*,...,,,,.,,..%@@@@@@@@@@@@@&@<br>
+@@@@@@@@@@&/,,*****,,,.,,*...,*,,***,..,&@@@@@@@@@@@@@@<br>
+@@@@@@@@@@%*,,/(#(#%%/*#**/#%###%###/*,,(@@@@@@@@@@&&@@<br>
+@@@@@@@@@@&///(##%%%%%%%&%%%%%%%%###((*,*@@@@@@@@@@@@@&<br>
+@@@@@@@@@@&/((##%%%%%%%%%%%%%%%%%###((/*/&@@@@@@@@@@@@&<br>
+@@@@@@@@@@&/((#####%%%&&&&&%%%%%%###(((//&@@@@@@@&@&&&@<br>
+@@@@@@@@((/,,,,///*,*,/#%%#(,,,,,,,,,/(//#(((@@@@@&&&@@<br>
+@@@@@@@&##(*&(/,,/.,(/#*(#*(%/#..*,/((,,/##((&@@@@@@&&&<br>
+@@@@@@@@##%(,#((####%#//#%#,#%%%####(((((%%(%&@@@@&&&&&<br>
+@@@@@@@@###((#####%%%#(#%%##/%%#######(((#(#&@@@&&@&&&&<br>
+@@@@@@@@@##(#####%%%%#(((#(/(#%%%%####((##(&&@@@&&&&&&&<br>
+@@@@@@@@@@@((#########((###(####%%##((((&&&&@@&&&&&&&&&<br>
+@@@@@@@@@@@&(######(((((////(((######(((&@@&@@&&&&&&&&&<br>
+@@@@@@@@@@@@#(########(((((((#######(((&@&&&@@@&&&&&&&&<br>
+@@@@@@@@@@@@@((((((###########((#(((//(&@&&&&&&&&&&&&&&<br>
+@@@@@@@@@@@@@%(/////((###(##((//////(((&&&&&&&&&&&&&&&&<br>
+@@@@@@@@@@@@@#(((/***,*////*///(//(((((&&&&&&&&&&&&&&&&<br>
+@@@@@@&@%,,#(((((((((/(/((((((((((((((((#&&&&&&&&&&&&&&<br>
+@@&,,......((((((((((((####(((((####(((((((##,%&&&&&&&&<br>
+............###(##########((##################....,&&&&<br>
+.............,#############################%%*........,<br>
+,..............*##########################%#...........<br>
+(................#%######################..............<br>
+%...................##%##%%%##%%%%%%%(.................<br>
+</div>	
+			
 		</div>
 		<div class="contactRight">
-		<form class="contactContent" action="https://formspree.io/f/mzbkagve" method="POST">
+		<form class="contactContent" action="form.html" method="get">
 			
 			<div>
 				<label for="name">Teljes név: </label>
-				<input type="text" id="name" name="name" required>
+				<input type="text" id="name" name="name">
 			</div>
 			<div>
 				<label for="mail">Feladó e-mail címe: </label>
@@ -145,14 +152,14 @@
 			</div>
 			<div>
 				<label for="targy">Tárgy: </label>
-				<input type="text" id="targy" name="targy" required>
+				<input type="text" id="targy" name="targy">
 			</div>
 			<div>
-				<label class="message" for="message">Üzenet: </label>
-				<textarea id="message"name="Text1" cols="40" rows="15" required></textarea>
+				<label style="float:left"for="message">Üzenet: </label>
+				<textarea id="message"name="Text1" cols="40" rows="15"></textarea>
 			</div>
+			<button type="reset">[ Reset ]</button>			
 			<button type="submit">[ Küldés ]</button>
-            <button type="reset">[ Reset ]</button>
 		</form>
 		</div>
 	</div>
