@@ -1,0 +1,70 @@
+table{
+	margin-top:40px;
+	}
+.profile-image{
+    color:var(--mainColor);
+    font-size: .65em;
+    line-height: 1.3em;
+	margin-top:30px;
+	width:320px;
+	height: 380px;
+	border:none
+	}
+.flexbox {
+	display: grid;
+	grid-template-columns: 0fr 1fr;
+	grid-template-rows: 1fr;
+	gap: 0px 0px;
+	grid-template-areas:"contactLeft contactRight";
+}
+.contactRight {
+	grid-area: contactRight;
+    min-height: 350px;
+	border: 3px solid var(--mainColor);
+	margin: 40px;
+    padding: 20px;
+	text-align:right;
+}
+.contactLeft { grid-area: contactLeft;}
+input, textarea {
+	resize: none;
+	overflow:hidden;
+	background:none;
+	color: var(--mainColor);
+	border: 1px solid var(--mainColor);
+	
+}
+.contactContent {
+	width:380px;
+}
+.contactContent button {
+	float:right;
+	width:auto;
+	padding:0;
+	margin:20px;
+	
+}
+input {
+	padding: 5px;
+	width:50%;
+    margin-bottom:15px;
+}
+@media (max-width:1180px) {
+    .flexbox {
+        display: block;
+    }
+
+    .profile-image {
+        display: none;
+    }
+    .contactLeft {
+        border-bottom: 3px solid var(--mainColor);
+    }
+    .contactRight {
+        border:none;
+        margin:0;
+    }
+}
+tr td:first-child {padding-right:25px;}
+tr {line-height: 25px;}
+tr td a {color:var(--mainColor);}
