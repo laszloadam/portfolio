@@ -270,7 +270,9 @@ footer .right {
     h1 {
         margin: 0px;
         padding: 10px;
+        font-size: 130%;
     }
+    
 }
 
 @media print {
