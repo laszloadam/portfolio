@@ -65,6 +65,26 @@ input {
         margin:0;
     }
 }
+@media (max-width: 530px) {
+    .flexbox{
+        margin-top: -30px;
+    }
+    label {
+        display:block;
+    }
+    .contactRight {
+        text-align: left;
+        padding:10px;
+    }
+    .message {
+        float:none;
+    }
+    textarea {width:195px}
+    .contactContent button {
+    float: left;
+    margin: 20px 10px;
+    }
+}
 tr td:first-child {padding-right:25px;}
 tr {line-height: 25px;}
 tr td a {color:var(--mainColor);}
