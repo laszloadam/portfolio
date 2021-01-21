@@ -75,7 +75,12 @@ input {
     .contactRight {
         text-align: left;
         padding:10px;
+	display: flex;
+        justify-items: center;
+        align-items: center;
     }
+    input, textarea {
+	    width: 100%
     .message {
         float:none;
     }
