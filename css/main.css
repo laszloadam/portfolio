@@ -1,24 +1,29 @@
 figure {
-	    float: left;
-	    margin-right: 20px;
-	    margin-left: 0px;
-	    margin-bottom: 0px;
-		}
-.img{
-	    margin-top: 40px;
-		}
+    float: left;
+    margin-right: 20px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+}
+
+.img {
+    margin-top: 40px;
+}
+
 .img p {
-      text-align: justify;
-    }
+    text-align: justify;
+}
+
 figcaption {
-      text-align: center;
-    }
+    text-align: center;
+}
+
 #hacking {
-      color: red;
-      padding: .3em .6em;
-    }
+    color: red;
+    padding: .3em .6em;
+}
+
 #hacking:hover {
-      cursor: pointer;
-      color: white;
-      background-color: red;
-        }
+    cursor: pointer;
+    color: white;
+    background-color: red;
+}
