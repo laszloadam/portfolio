@@ -1,36 +1,46 @@
 .box-wrapper {
-			display:flex;
-			flex-flow: row wrap;
-			clear:both;
-			max-height: 660px;
-			overflow: auto;
-			margin-right: -20px;
-			margin-top: 20px;
-			overflow:visible;
-		}
+    display: flex;
+    flex-flow: row wrap;
+    clear: both;
+    max-height: 660px;
+    overflow: auto;
+    margin-right: -20px;
+    margin-top: 20px;
+    overflow: visible;
+}
+
 .box {
-			flex: 1;
-			margin: 10px;
-			min-width: 185px;
-		}
+    flex: 1;
+    margin: 10px;
+    min-width: 185px;
+}
+
 img {
-			max-width: 200px;
-			max-height: 100px;
-			border-radius:10px;
-		}
-h2 {min-height:55px}
-.box-content p {min-height:60px;}
+    max-width: 200px;
+    max-height: 100px;
+    border-radius: 10px;
+}
+
+h2 {
+    min-height: 55px
+}
+
+.box-content p {
+    min-height: 60px;
+}
+
 .btn {
-			display:inline-block;
-			padding: .5rem 1rem;
-			text-decoration: none;
-			background: var(--mainColor);
-			color:black;
-			box-shadow: 0 0 5px var(--mainColor);
-			margin: 0px auto;
-		}
+    display: inline-block;
+    padding: .5rem 1rem;
+    text-decoration: none;
+    background: var(--mainColor);
+    color: black;
+    box-shadow: 0 0 5px var(--mainColor);
+    margin: 0px auto;
+}
+
 @media (max-width: 530px) {
-			.box {
-			  min-width: 150px;
-			}
-		}
+    .box {
+        min-width: 150px;
+    }
+}
