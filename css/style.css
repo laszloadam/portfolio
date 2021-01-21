@@ -267,14 +267,21 @@ footer .right {
 }
 
 @media (max-width: 530px) {
+    .banner{
+        padding:0;
+    }
+    .content {
+        padding:5px;
+    }
+    main{
+        padding: 0px 5px;
+    }
     h1 {
         margin: 0px;
         padding: 10px;
         font-size: 130%;
     }
-    
 }
-
 @media print {
     body {
         color: black;
