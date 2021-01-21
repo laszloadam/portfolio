@@ -80,7 +80,8 @@ input {
         align-items: center;
     }
     input, textarea {
-	    width: 100%
+	    width: 100%;
+	}
     .message {
         float:none;
     }
