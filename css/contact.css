@@ -1,46 +1,124 @@
-.box-wrapper {
-    display: flex;
-    flex-flow: row wrap;
-    clear: both;
-    max-height: 660px;
-    overflow: auto;
-    margin-right: -20px;
-    margin-top: 20px;
-    overflow: visible;
+table {
+    margin-top: 40px;
 }
 
-.box {
-    flex: 1;
-    margin: 10px;
-    min-width: 185px;
+.profile-image {
+    color: var(--mainColor);
+    font-size: .65em;
+    line-height: 1.3em;
+    margin-top: 30px;
+    width: 320px;
+    height: 380px;
+    border: none
 }
 
-img {
-    max-width: 200px;
-    max-height: 100px;
-    border-radius: 10px;
+.flexbox {
+    display: grid;
+    grid-template-columns: 0fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "contactLeft contactRight";
 }
 
-h2 {
-    min-height: 55px
+.contactRight {
+    grid-area: contactRight;
+    min-height: 350px;
+    border: 3px solid var(--mainColor);
+    margin: 40px;
+    padding: 20px;
+    text-align: right;
 }
 
-.box-content p {
-    min-height: 60px;
+.contactLeft {
+    grid-area: contactLeft;
 }
 
-.btn {
-    display: inline-block;
-    padding: .5rem 1rem;
-    text-decoration: none;
-    background: var(--mainColor);
-    color: black;
-    box-shadow: 0 0 5px var(--mainColor);
-    margin: 0px auto;
+input,
+textarea {
+    resize: none;
+    overflow: hidden;
+    background: none;
+    color: var(--mainColor);
+    border: 1px solid var(--mainColor);
+
+}
+
+.contactContent {
+    width: 380px;
+}
+
+.contactContent button {
+    float: right;
+    width: auto;
+    padding: 0;
+    margin: 20px;
+
+}
+
+input {
+    padding: 5px;
+    width: 50%;
+    margin-bottom: 15px;
+}
+
+@media (max-width:1180px) {
+    .flexbox {
+        display: block;
+    }
+
+    .profile-image {
+        display: none;
+    }
+
+    .contactLeft {
+        border-bottom: 3px solid var(--mainColor);
+    }
+
+    .contactRight {
+        border: none;
+        margin: 0;
+    }
 }
 
 @media (max-width: 530px) {
-    .box {
-        min-width: 150px;
+    .flexbox {
+        margin-top: -30px;
     }
+
+    label {
+        display: block;
+    }
+
+    .contactRight {
+        text-align: left;
+        padding: 10px;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+    }
+
+    .message {
+        float: none;
+    }
+    .contactContent button {
+        float: left;
+        margin: 20px 10px;
+    }
+}
+
+tr td:first-child {
+    padding-right: 25px;
+}
+
+tr {
+    line-height: 25px;
+}
+
+tr td a {
+    color: var(--mainColor);
 }
