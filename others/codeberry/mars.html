@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Első weboldal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="pics/myicon.png" />
+</head>
+
+<body>
+    <div class="allCenter">
+        <h1>Üzemanyag-kalkulátor</h1>
+        <from>
+            <label for="tavolsag">Hány kilométer távolságot kíván megtenni?</label>
+            <input type="text" id="tavolsag" name="tavolsag" placeholder="Adjon meg egy számot!">
+            <label for="fogyasztas">Mi az űrhajó átlagos fogyasztása literben?</label>
+            <input type="text" id="fogyasztas" name="fogyasztas" placeholder="Adjon meg egy számot!">
+            <label for="tartaly">Mi az űrhajó üzemanyagtartályának űrtartalma literben?</label>
+            <input type="text" id="tartaly" name="tartaly" placeholder="Adjon meg egy számot!">
+            <button type="button" onclick="calculateFuelToOffload();">Kiszámol</button>
+            <div id="eredmeny">
+                <p></p>
+            </div>
+        </from>
+    </div>
+    <script src="js/mars.js" defer></script>
+</body>
+
+</html>

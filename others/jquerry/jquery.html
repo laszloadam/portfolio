@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+        <title>jQuery</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="../jquery.v3.5.1.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#button1").click(function(){
+                    $("p").toggle(500);
+                });
+                $("#buttonX").click(function(){
+                    $(".thrd").hide(300);
+                });
+                $("#button2").hover(function(){
+                    $(".thrd").show(300);
+                });
+            });
+        </script>
+    </head>
+    
+    <body>
+        <nav>
+            <a href="../index.html">Kilépés</a>
+        </nav>
+        <button id="button1">Mutat</button><br>
+        <p>
+            lorem ipsum
+        </p>
+        <p>
+            lorem ipsum1
+        </p>
+        <button id="button2">Div-et mutat</button>
+        <div class="thrd">
+            lorem ipsum2
+            <button id="buttonX">X</button>
+        </div>
+        <div> Ez egy div!</div>
+    </body>
+</html>

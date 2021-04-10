@@ -1,0 +1,10 @@
+body {
+    background-image: url("../pics/bg.png");
+}
+div{
+    color: white;
+    border: 1px solid black;
+    width: 200px;
+    height: 330px;
+    background-color: rgba(0, 0, 0, .5)
+}

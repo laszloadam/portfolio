@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>címe</title>
+		<style>
+			html, body {
+				height: 100%;
+				margin: 0;
+				overflow: hidden;
+				display: flex;
+				flex-direction: column;
+			}
+			.Rline {
+				border: 1px solid red;
+			}
+			.kozepso {
+				flex-grow: 1;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.fejlec {
+				display: flex;
+				justify-content:center;
+				}
+			.lablec {
+				display: flex;
+				justify-content:center;
+			}
+			.bgvideo {
+				position: absolute;
+				z-index: -100;
+				top: 50%;
+				left: 50%;
+				min-width: 100%;
+				min-height: 100%;
+				width: auto;
+				height: auto;
+				transform: translate(-50%, -50%); 
+			}
+		</style>
+	</head>
+	<body>
+	<video autoplay loop muted poster="anibg.png" class="bgvideo">
+			<source src="bg.mp4" type="video/mp4">
+		</video>
+	
+		<div class="fejlec Rline">Fejléc</div>
+		<div class="kozepso Rline">Árvíztűrő tükörfúrógép</div>
+		<div class="lablec Rline">Lábléc</div>
+	</body>
+</html>
