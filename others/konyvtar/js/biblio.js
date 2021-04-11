@@ -45,15 +45,24 @@ for (let x=0; x <= booksNumber-1; x++) {
     makeDiv.setAttribute('onmouseover', 'mouseOver(this)');
     makeDiv.setAttribute('onmouseout', 'mouseOut(this)');
 
+    // a main-hez adja a div1-et, majd a háttérképet
+
     main.appendChild(makeDiv);
     makeDiv.style.backgroundImage = "url('"+biblio[x].image+"')";
+
+    // A div1-hez adja a subDiv-et, ami rövid leírást tartalmazza.
 
     makeDiv.appendChild(subDiv).innerHTML = '<h3>'+biblio[x].title +'</h3><p>'+biblio[x].author+'</p><p>'+  biblio[x].publication +'</p><p>Vélemény:</p>';
     for(let star =1; star <= biblio[x].rating; star++ ){
         subDiv.innerHTML += '✰';
     };
+
+    // add button
+
     subDiv.innerHTML += '<button class="btns" id="subDiv-btns'+x+'">Részletek</button>';
     
+    // Add onclick funkció
+
      document.getElementById('subDiv-btns'+x).setAttribute('onclick', 'showDescription('+x+')')
 
     function showDescription(xDesc){
