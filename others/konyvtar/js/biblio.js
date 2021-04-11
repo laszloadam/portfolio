@@ -44,19 +44,35 @@ for (let star = 1; star <= bookCatalog.myBook1.rating; star++) {
 
 //könyvek kiiratása
 
-let dolog = document.getElementById("dolog");
-
-
-for (let x=0; x <= booksNumber-1; x++){
+for (let x=0; x <= booksNumber-1; x++) {
     let main = document.getElementById("main");
     let makeDiv = document.createElement("DIV");
     makeDiv.classList.add('div1');
     let subDiv = document.createElement("DIV");
-    subDiv.classList.add('div2');
+    subDiv.setAttribute('class', 'allDiv hide');
+    subDiv.setAttribute('id', 'div-'+x);
+    makeDiv.setAttribute('onmouseover', 'mouseOver(this)');
+    makeDiv.setAttribute('onmouseout', 'mouseOut(this)');
+    
+    
 
-
-    main.appendChild(makeDiv)
+    main.appendChild(makeDiv);
     makeDiv.style.backgroundImage = "url('"+biblio[x].image+"')";
-    makeDiv.appendChild(subDiv).innerHTML = biblio[x].id +'<br>'+  biblio[x].title +'<br>'+  biblio[x].author +'<br>'+  biblio[x].description +'<br>'+  biblio[x].rating;
-
+    makeDiv.appendChild(subDiv).innerHTML = biblio[x].title +'<br>'+  biblio[x].author +'<br>'+  biblio[x].description +'<br>';
+    
 };
+
+
+var content = document.getElementById('content');
+
+function writerate(){
+    content.write("valami2")
+};
+
+
+function mouseOver(xDiv) {
+    xDiv.getElementsByTagName('div')[0].setAttribute('class', 'allDiv show')
+};
+function mouseOut(xDiv) {
+    xDiv.getElementsByTagName('div')[0].setAttribute('class', 'allDiv hide')
+}
