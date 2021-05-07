@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titkos Kód</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="javascript/code.js" defer></script>
+</head>
+<body onload="helping()">
+    <div id="difficulty">
+        <h2>Nehézségi szint<span class="closeX" onclick="closeDif()">X</span></h2>
+        
+        <div>
+            <div id="easy" onclick="easyst()">Könnyű</div>
+        <div id="normal" onclick="middle()">Normal</div>
+        <div id="hard" onclick="hardest()">Nehéz</div>
+        </div>
+        <p>Ha módosítasz a nehézségi szinten, új kódot kapsz és törlöd a próbálkozásaidat.</p>
+    </div>
+    <div id="helpText" >
+        <h1>Titkos Kód</h1>
+        <p>A játék lényege, hogy kitaláljuk a rejtélyes kódot a lehető leg kevesebb próbálkozással. Ehhez az alábbi mezőkbe kell beírni számokat 0-9-ig,<img src="src/inputs.png" style="width:20%" alt="Számok helye"> majd rányomni a "Küldés!", gombra.</p><img src="src/send.png" style="width:10%" alt="kezdés">
+        <h2>Nehézségi szintek:</h2>
+        <div class="helpDiffi">
+            <div>
+                <h3>Könnyű</h3>
+                <p>Könnyű szinten a visszajelzőnél megjelennek a tippjeid. Ha a szám zöld (<span style="color:green">8</span>), akkor eltaláltad. Ha a szám sárga (<span style="color:yellow">8</span>), akkor egy másik helyen van, ha viszont piros(<span style="color:red">8</span>), akkor nem szerepel a kódban.</p>
+            </div>
+            <div>
+                <h3>Normál</h3>
+                <p>Normál szinten a számok már ismétlődhetnek is.</p>
+            </div>
+            <div>
+                <h3>Nehéz</h3>
+                <p>Nehéz szinten az előző tippek értékei nem látszódnak. Csak az emlékezetedbe bízhatsz.
+                A visszajelzőn pusztán a tippjeid színe látszik az értékek nem.(<span style="color:green">&#11044;</span>, <span style="color:yellow">&#11044;</span>, vagy <span style="color:red">&#11044;</span>)
+                </p>
+            </div>
+        </div>
+
+        <p>Az "Újra!" <img src="src/reset.png" style="width:10%" alt="újra">gombbal elölről kezdhetjük egy új titkos kóddal.</p>
+        <p>A &#9993; ikonra kattintva pedig visszajelzést küldhetsz, amibe leírhatod véleményed, tapasztalatod, ötleted.</p>
+        <button type="button" onclick="helpQuit()">Értem</button>
+    </div>
+    <div id="win">
+        <h1>Nyertél!</h1>
+        <p> Gratulálunk! <span id="winText"></span> próbálkozásból kitaláltad! </p>
+        <button type="button" onclick="winQuit()">Újra!</button>
+    </div>
+    <form id="feedback" action="https://formspree.io/f/xgepgron" method="post"><span class="closeX" onclick="closeMail()">X</span>
+        <input type="email" name="email" id="email" placeholder="e-mail">
+        <textarea name="formText" id="formText" cols="40" rows="10" placeholder="Üzenet"></textarea>
+        <p>Ha van ötleted, vagy véleményed, nyugodtan küldd el és ha jó, akkor még talán bele is teszem.</p>
+        <button type="submit" id="formSubmit">Küldés</button>
+    </form>
+    <main>
+        <content id="content">
+            <div class="contentBG"></div>
+            <span>Nehézség: </span>
+            <span id="diffiText"  onclick="level()">Könnyű</span>
+            <div id="message"></div>
+            <form id="forms" name="sampleform">
+                <input id="one" placeholder="0" type="tel" maxlength="1" name="first" onclick="this.setSelectionRange(0, this.value.length)" onKeyup="autotab(this, document.sampleform.second),this.setSelectionRange(0, this.value.length)">
+                <input id="two" placeholder="0" type="tel" maxlength="1" name="second" onclick="this.setSelectionRange(0, this.value.length)"
+                onKeyup="autotab(this, document.sampleform.third),this.setSelectionRange(0, this.value.length)">
+                <input id="three" placeholder="0" type="tel" maxlength="1" name="third" onclick="this.setSelectionRange(0, this.value.length)"
+                onKeyup="autotab(this, document.sampleform.fourth),this.setSelectionRange(0, this.value.length)">
+                <input id="four" placeholder="0" type="tel" maxlength="1" name="fourth" onclick="this.setSelectionRange(0, this.value.length)"
+                onKeyup="autotab(this, document.sampleform.fifth),this.setSelectionRange(0, this.value.length)">
+                <input id="five" placeholder="0" type="tel" maxlength="1" name="fifth" onclick="this.setSelectionRange(0, this.value.length)" onKeyup="autotab(this, document.sampleform.fifth),this.setSelectionRange(0, this.value.length)">
+                <div class="output">
+                    <div id="tip-count"></div>
+                    <div id="tip-col-1"></div>
+                    <div id="tip-col-2"></div>
+                    <div id="tip-col-3"></div>
+                    <div id="tip-col-4"></div>
+                    <div id="tip-col-5"></div>
+                </div>
+                <div class="buttons">
+                    <button id="submit" type="button" onclick="start()">Küldés!</button>
+                    <button id="reset" type="button" onclick="again();fail()">Újra!</button>
+                    <button id="help" type="button" onclick="helping()">?</button>
+                    <button id="mail" type="button" onclick="mailTo()">&#9993;</button>
+                </div>
+                <div id="stat">
+                    <p>Nyert: <span id="winPoint">0</span></p>
+                    <p>Vesztett: <span id="failPoint">0</span></p>
+                </div>
+            </form>
+        </content>
+    </main>
+    
+</body>
+
+</html>
