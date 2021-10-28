@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-	<title>Referencia munkák</title>
+	<title>Referenciák</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/referenc.css">
-
 </head>
 <body>
 	<h1 class="headers">[ Referencia munkáim ]
 	<div class="winButtons">
-				 <span class="window" onclick="minimal()">-</span><span class="window" onclick="full()">&#8414;</span><span class="window" onclick="closed()">&#10799;</span>
+		<span class="window" onclick="minimal()">-</span><span class="window" onclick="full()">&#8414;</span><span class="window" onclick="closed()">&#10799;</span>
 	</div>
 	</h1>
 	<h2>EZEK NEM A VÉGLEGES REFERENCIA MUNKÁIM! A legtöbb csak a szerkesztés idejére került a listába.</h2>
@@ -20,7 +19,7 @@
 			<div class="box-content">
 				<h2>Canvas-gyár</h2>
 				<p>Gyakorlások</p>
-				<a class="btn" href="">Részletek</a>
+				<a class="btn" href="others/codeberry/canvas.html">Részletek</a>
 			</div>
 		</div>
 		<div class="box">
@@ -32,11 +31,11 @@
 			</div>
 		</div>
 		<div class="box">
-			<img src="pics/avp.png" alt="avp">
+			<img src="pics/gamepad.svg" alt="játékok">
 			<div class="box-content">
-				<h2>Alien's vs. Predator</h2>
-				<p>Egy másik rajongói gyakorló oldalam</p>
-				<a class="btn" href="">Részletek</a>
+				<h2>Játékok</h2>
+				<p>AZ általam írt böngészős játékok</p>
+				<button class="btn" id="games">Részletek</button>
 			</div>
 		</div>
         <div class="box">
@@ -48,5 +47,12 @@
 			</div>
 		</div>
 	</div>
+	<script>
+       $(document).ready(function() {
+		   $("#games").click(function(){
+			   $("main").load("inc/games.html")
+		   });
+	   })
+    </script>
 </body>
 </html>

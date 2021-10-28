@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+	<title>Játékok</title>
+	<meta charset="UTF-8">
+    <meta name="author" content="László Ádám">
+	<meta name="description" content="my portfolio Games">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/referenc.css">
+</head>
+<body>
+
+	<h1 class="headers">[ Játékok ]
+		<div class="winButtons">
+			<span class="window" onclick="minimal()">-</span><span class="window" onclick="full()">&#8414;</span><span class="window" onclick="closed()">&#10799;</span>
+		</div>
+	</h1>
+	<button id="btnBack">X</button>
+	<div class="box-wrapper">
+		<div class="box">
+			<img src="pics/canvas.png" alt="Canvas">
+			<div class="box-content">
+				<h2>Titkos kód</h2>
+				<p>A játék lényege, hogy kitaláljunk egy rejtélyes számot</p>
+				<button class="btn" id="btnSC">Részletek</button>
+			</div>
+		</div>
+		<div class="box">
+			<img src="pics/mars.png" alt="Kalkulátor">
+			<div class="box-content">
+				<h2>Hármas amőba</h2>
+				<p>Mindenki ismeri</p>
+				<button class="btn" id="btnTTT">Részletek</button>
+			</div>
+		</div>
+		<div class="box">
+			<img src="pics/gamepad.svg" alt="avp">
+			<div class="box-content">
+				<h2>Kő papír olló</h2>
+				<p>A kő üti az ollót, az olló a papírt, a papír a követ.</p>
+				<button class="btn" id="btnSPS">Részletek</button>
+			</div>
+		</div>
+	</div>
+	
+	<div id="gameWindow"></div>
+	<script>
+		$(document).ready(function() {
+			$("#btnBack").click(function(){
+				$("main").load("inc/referenc.html")
+			});
+			$("#btnSC").click(function(){
+				$("#gameWindow").load("../games/secretCodeGame/index.html");
+				$("#gameWindow").css("height", "100%")
+			});
+			$("#btnTTT").click(function(){
+				$("#gameWindow").load("../games/ticTacToe/index.html");
+				$("#gameWindow").css("height", "100%")
+			});
+			$("#btnSPS").click(function(){
+				$("#gameWindow").load("../games/S-P-S/index.html");
+				$("#gameWindow").css("height", "100%")
+			});
+		})
+	 </script>
+</body>
+</html>

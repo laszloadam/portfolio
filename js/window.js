@@ -1,5 +1,3 @@
-//class=content position:relative
-//class=main     height: 30px; width: 300px;position: absolute; bottom: 0px;
 let main = document.getElementById("window");
 let error = document.getElementById("error");
 

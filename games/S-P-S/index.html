@@ -4,10 +4,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Kő Papír Olló</title>
-        <link rel="stylesheet" href="src/style.css">
+        <link rel="stylesheet" href="games/S-P-S/src/style.css">
     </head>
     <body onload="infoOpen()">
-        <h1>Kő, papír, olló!</h1>
+        <div class="gameBody">
+            <h1>Kő, papír, olló!</h1>
         <div id="info" onclick="infoOpen()">i</div>
         <div id="infoBox">
             <h2>Kő, papír, olló játék</h2>
@@ -19,25 +20,27 @@
             </ul>
             <button id="infoBtn" onclick="infoClosed()">Értem!</button>
         </div>
-        <main>
+        <div class="gameContent">
             <fieldset id="stone" class="playerHand" onclick="playStone()">
                 <legend>Kő</legend>
-                <img class="handImage" src="src/1.png" alt="kő">
+                <img class="handImage" src="games/S-P-S/src/1.png" alt="kő">
             </fieldset>
             <fieldset id="paper" class="playerHand" onclick="playPaper()">
                 <legend>Papír</legend>
-                <img class="handImage" src="src/2.png" alt="papír">
+                <img class="handImage" src="games/S-P-S/src/2.png" alt="papír">
 
             </fieldset>
             <fieldset id="scissor" class="playerHand" onclick="playScissor()">
                 <legend>Olló</legend>
-                <img class="handImage" src="src/3.png" alt="olló">
+                <img class="handImage" src="games/S-P-S/src/3.png" alt="olló">
             </fieldset>
-        </main>
+        </div>
         <div id="result">
             <h2 style="width:100%">Eredmény:</h2>
         </div>
-        <script src="js/script.js"></script>
-        <script src="js/story.js"></script>
+        </div>
+        
+        <script src="games/S-P-S/js/script.js"></script>
+        <script src="games/S-P-S/js/story.js"></script>
     </body>
 </html>

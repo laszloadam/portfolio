@@ -4,7 +4,6 @@
     clear: both;
     max-height: 660px;
     overflow: auto;
-    margin-right: -20px;
     margin-top: 20px;
     overflow: visible;
 }
@@ -37,6 +36,19 @@ h2 {
     color: black;
     box-shadow: 0 0 5px var(--mainColor);
     margin: 0px auto;
+}
+
+#gameWindow {
+    position: absolute;
+    top:40px;
+    width: 90%;
+    height:0%;
+    background-color: rgba(0,0,0, .8);
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    zoom: .8;
 }
 
 @media (max-width: 530px) {
