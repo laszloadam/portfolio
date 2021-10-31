@@ -7,19 +7,23 @@
 	<link rel="stylesheet" href="css/referenc.css">
 </head>
 <body>
-	<h1 class="headers">[ Referencia munkáim ]
-	<div class="winButtons">
-		<span class="window" onclick="minimal()">-</span><span class="window" onclick="full()">&#8414;</span><span class="window" onclick="closed()">&#10799;</span>
+	<div class="headers">
+		<div class="headerTitle">
+			[ Referencia munkáim ]
+		</div>
+		<div class="winButtons">
+			<span class="window" onclick="minimal()">-</span>
+			<span class="window" onclick="full()">&#8414;</span>
+			<span class="window" onclick="closeX()">&#10799;</span>
+		</div>
 	</div>
-	</h1>
-	<h2>EZEK NEM A VÉGLEGES REFERENCIA MUNKÁIM! A legtöbb csak a szerkesztés idejére került a listába.</h2>
-	<div class="box-wrapper">
+	<div class="box-list">
 		<div class="box">
 			<img src="pics/canvas.png" alt="Canvas">
 			<div class="box-content">
 				<h2>Canvas-gyár</h2>
 				<p>Gyakorlások</p>
-				<a class="btn" href="others/codeberry/canvas.html">Részletek</a>
+				<button class="btn">Részletek</button>
 			</div>
 		</div>
 		<div class="box">
@@ -27,7 +31,7 @@
 			<div class="box-content">
 				<h2>Üzemanyag kalkulátor</h2>
 				<p>Egy egyszerű üzemanyag kalkulátor</p>
-				<a class="btn" href="">Részletek</a>
+				<button class="btn">Részletek</button>
 			</div>
 		</div>
 		<div class="box">
@@ -43,10 +47,12 @@
 			<div class="box-content">
 				<h2><a href="https://cssbattle.dev/player/laszloadam" target="_blank">CSSBattle</a></h2>
 				<p>Egy játék, melynek célja, hogy a mintaképet a lehető legkevesebb kóddal megismételjük.</p>
-				<a class="btn" href="">Részletek</a>
+				<button class="btn">Részletek</button>
 			</div>
 		</div>
 	</div>
+	
+	
 	<script>
        $(document).ready(function() {
 		   $("#games").click(function(){

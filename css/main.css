@@ -1,3 +1,12 @@
+
+
+.mainContent {
+    padding: 0px 20px;
+    box-sizing: border-box;
+    overflow: auto;
+    height: calc(100% - 37px);
+}
+
 figure {
     float: left;
     margin-right: 20px;
@@ -5,21 +14,14 @@ figure {
     margin-bottom: 0px;
 }
 
-.img {
-    margin-top: 40px;
-}
-
-.img p {
+p {
     text-align: justify;
-}
-
-figcaption {
-    text-align: center;
 }
 
 #hacking {
     color: red;
     padding: .3em .6em;
+    margin: 5px auto;
 }
 
 #hacking:hover {

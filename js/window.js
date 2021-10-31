@@ -17,7 +17,7 @@ function full(){
     }, 1500);
 }
 
-function closed(){
+function closeX(){
     //alert("Kilépés megtagadva");
     error.style.display = "block";
     setTimeout(function(){

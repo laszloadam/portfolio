@@ -10,19 +10,24 @@
     <script src="js/hack.js" defer></script>
 </head>
 <body>
-
-	<h1 class="headers">[ Bemutatkozás ]
-	<div class="winButtons">
-				 <span class="window" onclick="minimal()">-</span><span class="window" onclick="full()">&#8414;</span><span class="window" onclick="closed()">&#10799;</span>
-	</div>
-	</h1>
-	<div class="img">
+        <div class="headers">
+            <div class="headerTitle">
+                [ Bemutatkozás ]
+            </div>
+            <div class="winButtons">
+                <span class="window" onclick="minimal()">-</span>
+                <span class="window" onclick="full()">&#8414;</span>
+                <span class="window" onclick="closeX()">&#10799;</span>
+            </div>
+        </div>
+    <div class="mainContent">
         <figure>
             <img id="hackImg" src="pics/mehacked.png" alt="itsame" width="200px">
             <figcaption>
-            <input id="hacking" type="button" value="[ Kép feltörése ]" onclick="hack()"></figcaption>
+                <button id="hacking"onclick="hack()">Kép feltörése</button>
+            </figcaption>
         </figure>
-		<p>
+        <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a odio vitae velit pellentesque semper. Curabitur blandit aliquet pharetra. Donec commodo velit sapien. Pellentesque vel tortor lobortis arcu tempor gravida. Curabitur ultrices accumsan orci, id ultrices nisl rhoncus a. Curabitur ac consequat nunc. Aliquam vel finibus quam. Etiam ac dolor sit amet massa cursus aliquam eu et tortor. Maecenas nec pulvinar erat. Maecenas aliquam urna id massa hendrerit, sed tristique sem ornare. In condimentum pharetra velit vitae ultricies. Morbi nec tristique felis.
         </p>
         <p>
@@ -30,7 +35,7 @@
         </p>
         <p>
             Cras ultricies purus mi, non fringilla nibh efficitur sodales. Pellentesque vehicula volutpat elit, id aliquet ante. Sed rutrum leo id nisl elementum venenatis. Pellentesque vitae tristique risus, quis euismod dui. Curabitur a aliquam tortor, a fermentum arcu. Nulla placerat risus turpis. Donec tristique elementum neque et iaculis. Nulla malesuada consequat orci, posuere mattis risus vestibulum et. Sed aliquet vestibulum ornare. Sed ultricies tristique dictum. Mauris non risus leo. Curabitur ac orci mollis, lobortis sapien non, ornare leo. Nunc condimentum leo at magna aliquet, non suscipit leo volutpat. Curabitur et orci elementum, auctor massa sed, egestas nisi.
-        </p>				
-	</div>
+        </p>
+    </div>
 </body>
 </html>

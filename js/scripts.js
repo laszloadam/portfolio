@@ -21,7 +21,7 @@ function blue() {
 };
 function red() {
     document.documentElement.style.setProperty('--mainColor', '#ff1f1f');
-    document.documentElement.style.setProperty('--secondColor', '880000');
+    document.documentElement.style.setProperty('--secondColor', '#cc0000');
     document.getElementById("content").style.backgroundImage = "url('pics/cont_bg_red.png')";
 };
 function green() {
