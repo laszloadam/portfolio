@@ -9,14 +9,17 @@
 	<link rel="stylesheet" href="css/referenc.css">
 </head>
 <body>
-
-	<h1 class="headers">[ Játékok ]
-		<div class="winButtons">
-			<span class="window" onclick="minimal()">-</span><span class="window" onclick="full()">&#8414;</span><span class="window" onclick="closed()">&#10799;</span>
+	<div class="headers">
+		<div class="headerTitle">
+			[ Játékok ]
 		</div>
-	</h1>
-	<button id="btnBack">X</button>
-	<div class="box-wrapper">
+		<div class="winButtons">
+			<span class="window" onclick="minimal()"><box-icon name='minus'></box-icon></span>
+			<span class="window" onclick="full()"><box-icon name='windows'></box-icon></span>
+			<span class="window" id="btnBack"><box-icon name='window-close'></box-icon></span>
+		</div>
+	</div>
+	<div class="box-list">
 		<div class="box">
 			<img src="pics/canvas.png" alt="Canvas">
 			<div class="box-content">
@@ -34,7 +37,7 @@
 			</div>
 		</div>
 		<div class="box">
-			<img src="pics/gamepad.svg" alt="avp">
+			<img src="pics/gamepad.svg" alt="kő, papír, olló">
 			<div class="box-content">
 				<h2>Kő papír olló</h2>
 				<p>A kő üti az ollót, az olló a papírt, a papír a követ.</p>
@@ -43,24 +46,54 @@
 		</div>
 	</div>
 	
-	<div id="gameWindow"></div>
+	<div id="gameListWindow">
+		<div id="gameHeader"></div>
+		<div id="gameWindow"></div>
+	</div>
+	
 	<script>
 		$(document).ready(function() {
 			$("#btnBack").click(function(){
-				$("main").load("inc/referenc.html")
+				$("#gameSubWindow").empty();
+				$("#gameSubWindow").css("height", "auto")
 			});
+			
 			$("#btnSC").click(function(){
 				$("#gameWindow").load("../games/secretCodeGame/index.html");
-				$("#gameWindow").css("height", "100%")
+				$('#gameHeader').html('<div class="headers"><div class="headerTitles">[ Titkos kód ]</div><div class="winButtons"><span id="quitGame" class="window"><box-icon name="window-close"></box-icon></span></div></div>');
+				$("#quitGame").click(function(){
+					$("#gameHeader").empty();
+					$("#gameWindow").empty();
+					$("#gameListWindow").css("height", "0%")
+				});
+				$("#gameSubWindow").css("height", "calc(100% - 43px)");
+				$("#gameListWindow").css("height", "100%");
+				$("#gameSubWindow").css("height", "100%")
 			});
 			$("#btnTTT").click(function(){
 				$("#gameWindow").load("../games/ticTacToe/index.html");
-				$("#gameWindow").css("height", "100%")
+				$('#gameHeader').html('<div class="headers"><div class="headerTitles">[ Amőba ]</div><div class="winButtons"><span id="quitGame" class="window"><box-icon name="window-close"></box-icon></span></div></div>');
+				$("#quitGame").click(function(){
+					$("#gameHeader").empty();
+					$("#gameWindow").empty();
+					$("#gameListWindow").css("height", "0%")
+				});
+				$("#gameSubWindow").css("height", "calc(100% - 43px)");
+				$("#gameListWindow").css("height", "100%");
+				$("#gameSubWindow").css("height", "100%")
 			});
 			$("#btnSPS").click(function(){
 				$("#gameWindow").load("../games/S-P-S/index.html");
-				$("#gameWindow").css("height", "100%")
-			});
+				$('#gameHeader').html('<div class="headers"><div class="headerTitles">[ Kő papír olló ]</div><div class="winButtons"><span id="quitGame" class="window"><box-icon name="window-close"></box-icon></span></div></div>');
+				$("#quitGame").click(function(){
+					$("#gameHeader").empty();
+					$("#gameWindow").empty();
+					$("#gameListWindow").css("height", "0%")
+				});
+				$("#gameSubWindow").css("height", "calc(100% - 43px)");
+				$("#gameListWindow").css("height", "100%");
+				$("#gameSubWindow").css("height", "100%")
+			})
 		})
 	 </script>
 </body>

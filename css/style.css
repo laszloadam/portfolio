@@ -49,7 +49,8 @@ nav {
     border: 3px solid var(--mainColor);
     box-shadow: 0 0 5px var(--mainColor);
     height: fit-content;
-    width: 19%;
+    min-width: 220px;
+    margin-right:10px
 }
 
 hr {
@@ -124,13 +125,11 @@ main button:hover {
     padding-bottom: 5px;
 }
 main {
+    width: 100%;
     background-color: black;
     border: 3px solid var(--mainColor);
     box-shadow: 0 0 5px var(--mainColor);
-    width: 79%;
     height: 100%;
-    position: absolute;
-    right: 0;
 }
 
 .headers {
@@ -141,16 +140,28 @@ main {
     text-align: center;
     text-shadow: 0 0 1px black;
     height: 37px;
+    width: 100%;
     cursor: context-menu;
     position: relative;
 }
 
+.headerTitle {
+    height: calc(100% - 4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .winButtons {
+    height: calc(100% - 4px);
     position: absolute;
     top: 0;
     right: 0;
     color:black;
     font-size: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 main p {
     line-height: 23px;
@@ -177,7 +188,7 @@ footer {
     display: none;
 }
 
-@media (max-width: 930px) {
+@media (max-width: 960px) {
     .content {
         background-image:none;
         flex-direction: column;
@@ -189,12 +200,12 @@ footer {
         width: 100%;
         z-index: 1;
         background-color: rgba(0, 0, 0, .8);
+        transition: height .4s;
     }
 
     nav:hover {
-        min-height: 16em;
-        transition: all .8s;
-        overflow: auto;
+        height: 20em;
+        transition: height .4s;
     }
 
 
@@ -207,9 +218,13 @@ footer {
     }
 
 
-    nav .submenu {
-        right: 15px;
-        top: -10px;
+    nav button {
+        font-size: 26px;
+    }
+
+    #submenu {
+        left: 13em;
+        top: 0.2em;
     }
     .winButtons {
         display: none;
@@ -266,41 +281,35 @@ footer {
     }
 }
 
-.menu-btn + input[type="checkbox"] {
-    display: none;
-}
 .window {
-    padding:8px 7px;
+    width: 30px;
+    height: 100%;
     transition-duration: .3s;
     overflow: hidden;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
         }
 .window:hover{
     background-color: var(--secondColor);
     transition-duration: .3s;
         }
-.window:last-child:hover {
-    background-color: #ff0000;
-    color:white;
-}
+
 .minimal {
     position: absolute;
     height:2em;
     width:26em;
+    left:255px;
     bottom:0px;
     overflow: hidden;
         }
-.menu-btn + input[type="checkbox"]:checked ~ .nav1,
-.nav1 li,
-.nav1 li ul li {
-    display: block;
-}
 
 /*------------------------*/
 
 #error{
     display: none;
-    position: relative;
+    position: absolute;
     top: 50%;
     left: 50%;
     margin-right: -50%;
@@ -313,6 +322,5 @@ footer {
     text-shadow: 0 0 30px red;
     background-color: #400000;
     margin: 5px;
-    height: 1em;
     width: 10em;
 }

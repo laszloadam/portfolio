@@ -31,6 +31,7 @@ table {
 
 .contactLeft {
     grid-area: contactLeft;
+    padding-left:40px;
 }
 
 input,
@@ -88,7 +89,9 @@ input {
     label {
         display: block;
     }
-
+    .contactLeft {
+        padding-left:10px;
+    }
     .contactRight {
         text-align: left;
         padding: 10px;

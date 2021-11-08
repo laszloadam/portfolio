@@ -14,8 +14,6 @@
 }
 #gameContent{
     display:block;
-    /* height:var(--heightPanel);
-    width:var(--widthPanel); */
     height:100%;
     width:100%;
     min-width: 360px;
@@ -164,7 +162,7 @@ textarea{
     resize: none;
     background-color: transparent;
 }
-p{
+.gameBody + p{
     padding:10px 0;
 }
 #helpText button, #win button, #formSubmit{

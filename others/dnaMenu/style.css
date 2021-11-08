@@ -1,0 +1,148 @@
+body {
+    background-color: rgba(0,0,0,.5);
+}
+nav {
+    display: flex;
+    flex-direction: row;
+}
+.menuElements{
+  height: 320px;
+  margin:0;
+  padding: 0;
+  position: relative;
+}
+li{
+  height: 40px;
+  width: 120px;
+  display:flex;
+  align-items: center;
+  list-style: none;
+  z-index: -3;
+  overflow: hidden;
+}
+.linkTitle {
+    right: 120px;
+    color: #ffffff;
+    background-color: #000000;
+    padding:0 5px;
+    text-decoration: none;
+    display:block;
+    opacity: 0;
+    position: relative;
+    transition: all .3s;
+}
+
+.menuDNA{
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly
+}
+.dnaBody {
+    width:120px;
+    height: 40px;
+    position: relative;
+    margin: 0px 0;
+    padding:10px;
+    box-sizing: border-box;
+    transition: all .2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.link {
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+.dnaBody:hover {
+    filter: brightness(200%);
+    background-color: rgba(0,0,0,.2);
+}
+.ball1, .ball2 {
+    height:20px;
+    width:20px;
+    border: 3px solid #ffffff;
+    border-radius: 20px;
+    transition: all 1s;
+    position: absolute;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    background-color: lightgrey;
+    box-shadow: 0 0 8px #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ball1 {
+    left: 10px;
+    animation-name: moves1;
+}
+.ball2 {
+    right: 10px;
+    animation-name: moves2;
+}
+.ball1 img, .ball2 img {
+    height: 90%;
+    opacity: .5;
+}
+
+
+.dnaLine {
+    position: absolute;
+    width: 60px;
+    height: 5px;
+    background-color: lightgrey;
+    box-shadow: 0 0 5px lightgrey;
+    border:3px solid #ffffff;
+    border-radius: 20px;
+    margin: 7.5px 20px;
+    animation-name: moveLine1;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    z-index: -2;
+}
+
+@keyframes moves1 {
+    0% {left:10px;z-index:1}
+    25% {height: 25px;width: 25px;}
+    49% {z-index:1}
+    50% {left:90px;z-index:-1;filter: brightness(100%)}
+    75% {height:15px;width:15px;filter: brightness(70%)}
+    100% {left:10px;z-index:-1;filter: brightness(100%)}
+}
+@keyframes moveLine1 {
+    0% {width:60px}
+    50% {width:10px; margin:7.5px 45px}
+    100% {width:60px}
+}
+@keyframes moves2 {
+    0% {right:10px;z-index:-1;filter: brightness(100%)}
+    25% {height: 15px;width: 15px;filter: brightness(70%)}
+    49% {z-index:-1}
+    50% {right:90px;z-index:1;filter: brightness(100%)}
+    75% {height: 25px;width: 25px;}
+    100% {right:10px;z-index:1}
+}
+
+
+.dna2 .dnaLine, .dna6 .dnaLine{
+    animation-delay: .375s;
+}
+.dna3 .dnaLine, .dna7 .dnaLine{
+    animation-delay: 0.75s;
+}
+.dna4 .dnaLine, .dna8 .dnaLine{
+    animation-delay: 1.125s;
+}
+.dna2 .ball1, .dna2 .ball2, .dna6 .ball1,.dna6 .ball2 {
+    animation-delay: .375s;
+}
+.dna3 .ball1, .dna3 .ball2, .dna7 .ball1, .dna7 .ball2 {
+    animation-delay: .75s;
+}
+.dna4 .ball1, .dna4 .ball2, .dna8 .ball1, .dna8 .ball2 {
+    animation-delay: 1.125s;
+}

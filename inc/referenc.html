@@ -12,26 +12,18 @@
 			[ Referencia munkáim ]
 		</div>
 		<div class="winButtons">
-			<span class="window" onclick="minimal()">-</span>
-			<span class="window" onclick="full()">&#8414;</span>
-			<span class="window" onclick="closeX()">&#10799;</span>
+			<span class="window" onclick="minimal()"><box-icon name='minus'></box-icon></span>
+			<span class="window" onclick="full()"><box-icon name='windows'></box-icon></span>
+			<span class="window" onclick="closeX()"><box-icon name='window-close'></box-icon></span>
 		</div>
 	</div>
 	<div class="box-list">
 		<div class="box">
-			<img src="pics/canvas.png" alt="Canvas">
+			<img src="pics/mars.png" alt="Kis projektek">
 			<div class="box-content">
-				<h2>Canvas-gyár</h2>
-				<p>Gyakorlások</p>
-				<button class="btn">Részletek</button>
-			</div>
-		</div>
-		<div class="box">
-			<img src="pics/mars.png" alt="Kalkulátor">
-			<div class="box-content">
-				<h2>Üzemanyag kalkulátor</h2>
-				<p>Egy egyszerű üzemanyag kalkulátor</p>
-				<button class="btn">Részletek</button>
+				<h2>Kis projektek</h2>
+				<p>Egyéb kis munkák</p>
+				<button class="btn" id="others">Részletek</button>
 			</div>
 		</div>
 		<div class="box">
@@ -51,12 +43,18 @@
 			</div>
 		</div>
 	</div>
+	<div id="gameSubWindow"></div>
 	
 	
 	<script>
        $(document).ready(function() {
 		   $("#games").click(function(){
-			   $("main").load("inc/games.html")
+			   $("#gameSubWindow").load("inc/games.html");
+			   $("#gameSubWindow").css('height', 'calc(100% - 43px)')
+		   });
+		   $("#others").click(function(){
+			   $("#gameSubWindow").load("inc/others.html");
+			   $("#gameSubWindow").css('height', 'calc(100% - 43px)')
 		   });
 	   })
     </script>
