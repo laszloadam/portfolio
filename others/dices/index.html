@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dobókockák</title>
+    <style>
+        html {
+            height: 100%;
+        }
+        body {
+            margin: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            background: #181818
+        }
+        .btns {
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: #000000;
+            width: 100%;
+            padding:20px;
+        }
+        button {
+            height:30px;
+            width:100px;
+            margin:0 20px;
+            cursor: pointer;
+            
+        }
+        #table {
+            display: flex;
+
+        }
+        .dice {
+            margin:10px;
+            height:100px;
+            width:100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #ffffff;
+            border-radius: 10px;
+            font-size: 32px;
+            position: relative;
+            cursor: pointer;
+        }
+        .dice::after {
+            position: absolute;
+            bottom: -40px;
+            left: 0;
+            font-size: 12px;
+            border: 1px solid #ffffff;
+            border-radius: 5px;
+            background: #474747;
+            padding:5px;
+            width: 100%;
+            content: 'Kattints a törléshez';
+            display:none;
+        }
+        .dice:hover::after {
+            display: inline;
+            
+        }
+        .dot {
+            margin:10px;
+            height: 15px;
+            width: 15px;
+            background-color: #ffffff;
+            border-radius: 100%;
+        }
+        .two1 {
+            position: absolute;
+            top: 0;
+            left:0
+        }
+        .two2 {
+            position: absolute;
+            bottom: 0;
+            right:0
+        }
+        .four1 {
+            position: absolute;
+            bottom: 0;
+            left:0
+        }
+        .four2 {
+            position: absolute;
+            top: 0;
+            right:0
+        }
+        .six1 {
+            position: absolute;
+            top: 50%;
+            left:0;
+            transform: translateY(-110%);
+        }
+        .six2 {
+            position: absolute;
+            top: 50%;
+            right:0;
+            transform: translateY(-110%);
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="btns">
+        <button class="roll" onclick="roll()">Dobás</button>
+        <button class="add" onclick="add()">Új kocka</button>
+    </div>
+    <div id="table">
+        <div class="dice" onclick="remove(this)">
+            <div class="dot"></div>
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+        const table= document.querySelector('#table');
+        const one = '<div class="dot"></div>';
+        const two = '<div class="two1 dot"></div><div class="two2 dot"></div>';
+        const three = '<div class="two1 dot"></div><div class="one dot"></div><div class="two2 dot"></div>';
+        const four = '<div class="two1 dot"></div><div class="four1 dot"></div><div class="two2 dot"></div><div class="four2 dot"></div>';
+        const five = '<div class="two1 dot"></div><div class="four1 dot"></div><div class="dot"></div><div class="two2 dot"></div><div class="four2 dot"></div>';
+        const six = '<div class="two1 dot"></div><div class="four1 dot"></div><div class="six1 dot"></div><div class="six2 dot"></div><div class="two2 dot"></div><div class="four2 dot"></div>';
+    
+        function roll(){
+            var dice = document.querySelectorAll('.dice');
+            for(var i = 0; i<dice.length; i++) {
+                let random = (Math.floor(Math.random()*6)+1)
+                if(random==1) {
+                    dice[i].innerHTML = one;
+                }
+                else if(random==2) {
+                    dice[i].innerHTML = two;
+                }
+                else if(random==3) {
+                    dice[i].innerHTML = three;
+                }
+                else if(random==4) {
+                    dice[i].innerHTML = four;
+                }
+                else if(random==5) {
+                    dice[i].innerHTML = five;
+                }
+                else if(random==6) {
+                    dice[i].innerHTML = six;
+                }
+                else {
+                    console.log('Hiba!')
+                }
+            }
+        };
+    
+        function add() {
+            table.innerHTML += '<div class="dice" onclick="remove(this)" title="Kattints a törléséhez"><div class="dot"></div>' 
+        };
+    
+        function remove(m) {
+            document.querySelector('#table').removeChild(m)
+    }
+    </script>
+</body>
+</html>

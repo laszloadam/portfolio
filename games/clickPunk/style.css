@@ -1,0 +1,52 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(0, 0, 0);
+    color: white;
+    height: 100%;
+}
+h1 {
+    margin: 20px;
+    text-align: center;
+}
+.container {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.item {
+    margin: 10px 0;
+    width: 48%;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    font-weight: 700;
+    font-size: 26px;
+    background: hsl(calc(var(--i) * 45), 100%, 40%);
+    cursor: pointer;
+}
+
+@keyframes highlight {
+    from {background: hsl(calc(var(--i) * 45), 100%, 60%)}
+    to { background: hsl(calc(var(--i) * 45), 100%, 40%)}
+  }
+
+.click {
+    background: hsl(calc(var(--i) * 45), 100%, 60%);
+    animation-name:highlight;
+    animation-duration: .5;
+}
+
+@media screen and (max-width:600px) {
+    h1 {display: none;}
+    .item {
+        font-size: 20px;
+    }
+}
