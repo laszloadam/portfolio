@@ -130,7 +130,7 @@ function start(){
     
     // Nehézségi szinttől függően vagy számot ír ki, vagy csak pöttyöt a visszajelző
 
-    if (decising == 1 || 2){
+    if (decising !==3){
       subDiv1.innerText = mycode1;
       subDiv2.innerText = mycode2;
       subDiv3.innerText = mycode3;
