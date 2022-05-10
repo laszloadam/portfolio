@@ -24,21 +24,32 @@ body{
     justify-content: center;
     align-items: center;
 }
-main{
-    box-shadow: 5px 5px 20px #000000;
-    border-radius: 20px;
+.gameBody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-content{
-    background-color: transparent;
+.gameMain {
+    width: var(--widthPanel);
+}
+#gameContent{
     display:block;
-    height:var(--heightPanel);
-    width:var(--widthPanel);
+    height:100%;
+    width:100%;
     min-width: 360px;
-    border-radius: 20px;
     padding:15px;
     position: relative;
-    box-shadow: inset 5px 5px 20px #424242;
 }
+#gameContent div {
+    overflow: hidden;
+}
+
+.gameMain{
+    box-shadow: 5px 5px 20px #000000;
+    border-radius: 20px;
+    height: var(--heightPanel)
+}
+
 .contentBG{
     position: absolute;
     top:0;
@@ -50,9 +61,7 @@ content{
     border-radius: 20px;
     z-index: -1;
 }
-content div {
-    overflow: hidden;
-}
+
 #message{
     font-family: 'digital';
     background-color: #0c0c0c;
@@ -95,39 +104,48 @@ button{
     margin:10px 20px;
 }
 .buttons{
-    height: 240px;
+    height: 200px;
     width: 140px;
     text-align: center;
     position: absolute;
-    top: -10px;
+    top: 0;
     right: 30px;
-    
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 #submit{
     background-color: transparent;
     border: 4px solid #adff2f;
     color: #adff2f;
+    padding:5px 10px;
+    width: 150px;
+    height: 40px;
 }
 #reset{
     background-color: transparent;
     border: 4px solid #ff2f2f;
     color: #ff2f2f;
-    height: 60px;
-    width: 60px;
+    padding:5px 10px;
+    width: 150px;
+    height: 40px;
 }
 #help, #mail{
-    width:40px;
-    height:40px;
-    margin:5px;
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
     background-color: #363636;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #FFFFFF;
     border: 3px solid rgba(0, 0, 0, 1);
     box-shadow: inset -5px -5px 5px rgba(0, 0, 0, 0.5);
 }
 #stat{
     position: absolute;
-    right: 30px;
-    bottom: 35px;
+    right: 7px;
+    bottom: 7px;
     background-color: #0c0c0c;
     border:5px solid #000000;
     padding:10px;
@@ -144,6 +162,15 @@ button{
     border: 5px solid #000000;
     border-radius: 20px;
     padding: 20px;
+}
+#helpText {
+    box-sizing: border-box;
+    padding-bottom:80px
+}
+.helpBtn {
+    position: absolute;
+    bottom:0;
+    right:0
 }
 #difficulty{
     width: 350px;
@@ -209,6 +236,7 @@ p{
     text-align: center;
     border: 2px solid #FFFFFF
 }
+
 #tip-count{
     position:absolute;
 }
@@ -245,35 +273,38 @@ p{
   font-size: 25px;
 } 
 
-@media only screen and (max-width:600px) {
+@media screen and (max-width:600px) {
     body{
       background-image:none;
       display: block;
     }
-    main{
+    .gameMain{
       box-shadow: none;
-      border-radius: none;
+      border-radius: 0px;
       
     }
-    content,#helpText, #feedback{
-        width: 100vw;
-        height: 100vh;
+    .gameBody,#helpText, #feedback{
+        width: 100%;
         margin:0;
         border:none;
         border-radius:0;
         box-shadow: none;;
 
     }
+    #helpText {
+        padding-bottom: 80px;
+    }
     .contentBG{
         display:none;
     }
     #forms{
         margin-left:0;
+        text-align: center;
     }
     .buttons{
         float:left;
         width:200px;
-        height: 100px;
+        height: 160px;
         display: flex;
         row-gap: 20px;
         column-gap: 20px;

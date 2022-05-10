@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Titkos Kód</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <!-- <link rel="stylesheet" href="games/secretCodeGame/css/styleIframe.css"> -->
 </head>
 <body class="gameBody" onload="helping()">
@@ -14,14 +14,14 @@
         
         <div>
             <div id="easy" onclick="easyst()">Könnyű</div>
-            <div id="normal" onclick="middle()">Normal</div>
+            <div id="normal" onclick="middle()">Közepes</div>
             <div id="hard" onclick="hardest()">Nehéz</div>
         </div>
         <p>Ha módosítasz a nehézségi szinten, új kódot kapsz és törlöd a próbálkozásaidat.</p>
     </div>
     <div id="helpText" >
         <h1>Titkos Kód</h1>
-        <p>A játék lényege, hogy kitaláljuk a rejtélyes kódot a lehető leg kevesebb próbálkozással. Ehhez az alábbi mezőkbe kell beírni számokat 0-9-ig,<img src="games/secretCodeGame/src/inputs.png" class="gameInputs" style="width:20%" alt="Számok helye"> majd rányomni a "Küldés!", gombra.</p><img src="games/secretCodeGame/src/send.png" style="width:10%" alt="kezdés">
+        <p>A játék lényege, hogy kitaláljuk a rejtélyes kódot a lehető leg kevesebb próbálkozással. Ehhez az alábbi mezőkbe kell beírni számokat 0-9-ig,<img src="./src/inputs.png" class="gameInputs" style="width:20%" alt="Számok helye"> majd rányomni a "Küldés!", gombra.</p><img src="./src/send.png" style="width:10%" alt="kezdés">
         <h2>Nehézségi szintek:</h2>
         <div class="helpDiffi">
             <div>
@@ -29,8 +29,8 @@
                 <p>Könnyű szinten a visszajelzőnél megjelennek a tippjeid. Ha a szám zöld (<span style="color:green">8</span>), akkor eltaláltad. Ha a szám sárga (<span style="color:yellow">8</span>), akkor egy másik helyen van, ha viszont piros(<span style="color:red">8</span>), akkor nem szerepel a kódban.</p>
             </div>
             <div>
-                <h3>Normál</h3>
-                <p>Normál szinten a számok már ismétlődhetnek is.</p>
+                <h3>Közepes</h3>
+                <p>Közepes szinten a számok már ismétlődhetnek is.</p>
             </div>
             <div>
                 <h3>Nehéz</h3>
@@ -42,7 +42,7 @@
 
         <p>Az "Újra!" <img src="src/reset.png" style="width:10%" alt="újra">gombbal elölről kezdhetjük egy új titkos kóddal.</p>
         <p>A &#9993; ikonra kattintva pedig visszajelzést küldhetsz, amibe leírhatod véleményed, tapasztalatod, ötleted.</p>
-        <button class="gameBtns" type="button" onclick="helpQuit()">Értem</button>
+        <button class="gameBtns helpBtn" type="button" onclick="helpQuit()">Értem</button>
     </div>
     <div id="win">
         <h1>Nyertél!</h1>
@@ -92,7 +92,7 @@
         </div>
     </div>
     
-    <script src="javascript/code.js"></script>
+    <script src="./javascript/code.js"></script>
 </body>
 
 </html>
