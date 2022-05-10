@@ -25,7 +25,7 @@
 			<div class="box-content">
 				<h2>Titkos kód</h2>
 				<p>A játék lényege, hogy kitaláljunk egy rejtélyes számot</p>
-				<button class="btn" id="btnSC">Részletek</button>
+				<button type="button" class="btn" id="btnSC"><a rel="noopener"href="https://laszloadam.github.io/portfolio/games/secretCodeGame/" target="_blank">Részletek</a></button>
 			</div>
 		</div>
 		<div class="box">
@@ -33,7 +33,7 @@
 			<div class="box-content">
 				<h2>Hármas amőba</h2>
 				<p>Mindenki ismeri</p>
-				<button class="btn" id="btnTTT">Részletek</button>
+				<button class="btn" id="btnTTT" disabled><a rel="noopener"href="https://laszloadam.github.io/portfolio/games/ticTacToe" target="_blank" >Részletek</a></button>
 			</div>
 		</div>
 		<div class="box">
@@ -41,7 +41,7 @@
 			<div class="box-content">
 				<h2>Kő papír olló</h2>
 				<p>A kő üti az ollót, az olló a papírt, a papír a követ.</p>
-				<button class="btn" id="btnSPS">Részletek</button>
+				<button class="btn" id="btnSPS"><a rel="noopener"href="https://laszloadam.github.io/portfolio/games/S-P-S/" target="_blank">Részletek</a></button>
 			</div>
 		</div>
 		<div class="box">
@@ -49,7 +49,7 @@
 			<div class="box-content">
 				<h2>ClickPunk</h2>
 				<p>Egy zenés játék</p>
-				<button class="btn" id="btnCP">Részletek</button>
+				<button class="btn" id="btnCP"><a rel="noopener"href="https://laszloadam.github.io/portfolio/games/clickPunk/" target="_blank">Részletek</a></button>
 			</div>
 		</div>
 	</div>
@@ -66,42 +66,42 @@
 				$("#gameSubWindow").css("height", "auto")
 			});
 			
-			$("#btnSC").click(function(){
-				$("#gameWindow").load("../games/secretCodeGame/index.html");
-				$('#gameHeader').html('<div class="headers"><div class="headerTitles">[ Titkos kód ]</div><div class="winButtons"><span id="quitGame" class="window"><box-icon name="window-close"></box-icon></span></div></div>');
-				$("#quitGame").click(function(){
-					$("#gameHeader").empty();
-					$("#gameWindow").empty();
-					$("#gameListWindow").css("height", "0%")
-				});
-				$("#gameSubWindow").css("height", "calc(100% - 43px)");
-				$("#gameListWindow").css("height", "100%");
-				$("#gameSubWindow").css("height", "100%")
-			});
-			$("#btnTTT").click(function(){
-				$("#gameWindow").load("../games/ticTacToe/index.html");
-				$('#gameHeader').html('<div class="headers"><div class="headerTitles">[ Amőba ]</div><div class="winButtons"><span id="quitGame" class="window"><box-icon name="window-close"></box-icon></span></div></div>');
-				$("#quitGame").click(function(){
-					$("#gameHeader").empty();
-					$("#gameWindow").empty();
-					$("#gameListWindow").css("height", "0%")
-				});
-				$("#gameSubWindow").css("height", "calc(100% - 43px)");
-				$("#gameListWindow").css("height", "100%");
-				$("#gameSubWindow").css("height", "100%")
-			});
-			$("#btnSPS").click(function(){
-				$("#gameWindow").load("../games/S-P-S/index.html");
-				$('#gameHeader').html('<div class="headers"><div class="headerTitles">[ Kő papír olló ]</div><div class="winButtons"><span id="quitGame" class="window"><box-icon name="window-close"></box-icon></span></div></div>');
-				$("#quitGame").click(function(){
-					$("#gameHeader").empty();
-					$("#gameWindow").empty();
-					$("#gameListWindow").css("height", "0%")
-				});
-				$("#gameSubWindow").css("height", "calc(100% - 43px)");
-				$("#gameListWindow").css("height", "100%");
-				$("#gameSubWindow").css("height", "100%")
-			})
+			// $("#btnSC").click(function(){
+			// 	$("#gameWindow").load("../games/secretCodeGame/index.html");
+			// 	$('#gameHeader').html('<div class="headers"><div class="headerTitles">[ Titkos kód ]</div><div class="winButtons"><span id="quitGame" class="window"><box-icon name="window-close"></box-icon></span></div></div>');
+			// 	$("#quitGame").click(function(){
+			// 		$("#gameHeader").empty();
+			// 		$("#gameWindow").empty();
+			// 		$("#gameListWindow").css("height", "0%")
+			// 	});
+			// 	$("#gameSubWindow").css("height", "calc(100% - 43px)");
+			// 	$("#gameListWindow").css("height", "100%");
+			// 	$("#gameSubWindow").css("height", "100%")
+			// });
+			// $("#btnTTT").click(function(){
+			// 	$("#gameWindow").load("../games/ticTacToe/index.html");
+			// 	$('#gameHeader').html('<div class="headers"><div class="headerTitles">[ Amőba ]</div><div class="winButtons"><span id="quitGame" class="window"><box-icon name="window-close"></box-icon></span></div></div>');
+			// 	$("#quitGame").click(function(){
+			// 		$("#gameHeader").empty();
+			// 		$("#gameWindow").empty();
+			// 		$("#gameListWindow").css("height", "0%")
+			// 	});
+			// 	$("#gameSubWindow").css("height", "calc(100% - 43px)");
+			// 	$("#gameListWindow").css("height", "100%");
+			// 	$("#gameSubWindow").css("height", "100%")
+			// });
+			// $("#btnSPS").click(function(){
+			// 	$("#gameWindow").load("../games/S-P-S/index.html");
+			// 	$('#gameHeader').html('<div class="headers"><div class="headerTitles">[ Kő papír olló ]</div><div class="winButtons"><span id="quitGame" class="window"><box-icon name="window-close"></box-icon></span></div></div>');
+			// 	$("#quitGame").click(function(){
+			// 		$("#gameHeader").empty();
+			// 		$("#gameWindow").empty();
+			// 		$("#gameListWindow").css("height", "0%")
+			// 	});
+			// 	$("#gameSubWindow").css("height", "calc(100% - 43px)");
+			// 	$("#gameListWindow").css("height", "100%");
+			// 	$("#gameSubWindow").css("height", "100%")
+			// })
 		})
 	 </script>
 </body>
