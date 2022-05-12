@@ -15,13 +15,11 @@ setInterval(
 
 //kinyitja a bal oldali beállításokat
 function optOpen() {
-    let submenu = document.getElementById("submenu");
-    
-    if (submenu.style.width === "0em"){
-        submenu.style.width = "6em";
-   } else {
-       submenu.style.width = "0em";
-   }
+    document.getElementById("submenu").style.transform="scale(1,1)";
+}
+function optClose() {
+    document.getElementById("submenu").style.transform="scale(0,1)";
+
 }
 
 

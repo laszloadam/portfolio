@@ -57,6 +57,10 @@ nav {
     min-width: 220px;
     margin-right:10px
 }
+nav button {
+    width: 100%;
+    text-align: left;
+}
 
 hr {
     border: 2px solid var(--mainColor);
@@ -96,15 +100,17 @@ main button:hover {
     filter: brightness(120%);
 }
 #options {
-    position: relative;
-    top: 1em;
+    margin-top:10px;
+    display: flex;
+    align-items: flex-end;
 }
 #submenu {
     transition: .3s;
     overflow: hidden;
-    position: relative;
-    top: -.2em;
-    left: 9em;
+    display: inline-block;
+    transform: scale(0,1);
+    transform-origin: left;
+    margin-left: 10px;
 }
 #blue, #red, #green {
     cursor: pointer;
@@ -228,10 +234,6 @@ footer {
         font-size: 26px;
     }
 
-    #submenu {
-        left: 13em;
-        top: 0.2em;
-    }
     .winButtons {
         display: none;
     }

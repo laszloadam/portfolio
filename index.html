@@ -28,12 +28,14 @@
             <button id="contact">Kapcsolat</button>
             <hr>
 			<p class="online">&#9635; Online</p>
-            <button id="options" onclick="optOpen()" >Beállítások &#5125;</button>
-            <div id="submenu" style="width:0em; height:1em">
-                <span id="blue" onclick="blue()"></span>
-                <span id= "red" onclick="red()"></span>
-                <span id= "green"  onclick="green()"></span>
-            </div>
+            <button id="options" onclick="optOpen()" onmouseleave="optClose()">Beállítások &#5125;
+                <span id="submenu">
+                    <span id="blue" onclick="blue()"></span>
+                    <span id= "red" onclick="red()"></span>
+                    <span id= "green"  onclick="green()"></span>
+                </span>
+            </button>
+            
             <button>Nyomtatás</button>
             <button onclick="window.location.href='#'">Kilépés</button>
         </nav>
