@@ -27,7 +27,8 @@
 			</div>
 		</div>
 		<div class="box">
-			<img src="pics/gamepad.svg" alt="játékok">
+			<!-- <img src="pics/gamepad.svg" alt="játékok"> -->
+			<div class="refBoxImage" style="mask-image: url(pics/gamepad.svg);-webkit-mask-image: url(pics/gamepad.svg);"></div>
 			<div class="box-content">
 				<h2>Játékok</h2>
 				<p>AZ általam írt böngészős játékok</p>
@@ -37,9 +38,9 @@
         <div class="box">
 			<img src="pics/cssbattle.png" alt="CSSBattle">
 			<div class="box-content">
-				<h2><a href="https://cssbattle.dev/player/laszloadam" target="_blank">CSSBattle</a></h2>
+				<h2>CSSBattle</a></h2>
 				<p>Egy játék, melynek célja, hogy a mintaképet a lehető legkevesebb kóddal megismételjük.</p>
-				<button class="btn">Részletek</button>
+				<button class="btn" id="cssBattle">Részletek</button>
 			</div>
 		</div>
 	</div>
@@ -55,6 +56,9 @@
 		   $("#others").click(function(){
 			   $("#gameSubWindow").load("inc/others.html");
 			   $("#gameSubWindow").css('height', 'calc(100% - 43px)')
+		   });
+		   $("#cssBattle").click(function(){
+			   window.open("https://cssbattle.dev/player/laszloadam", "_blank");
 		   });
 	   })
     </script>

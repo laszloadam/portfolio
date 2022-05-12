@@ -13,11 +13,19 @@
     padding:10px;
     text-align: center;
 }
-
 img {
     max-width: 200px;
     max-height: 100px;
     border-radius: 10px;
+}
+.refBoxImage {
+    height: 100px;
+    border-radius: 10px;
+    background-color:var(--mainColor);
+    mask-position: center;
+    -webkit-mask-position: center;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
 }
 
 
@@ -90,7 +98,20 @@ img {
 
 
 
+@media (max-width:1170px) {
+    .box-list {
+        flex-wrap: wrap;
+    }
+}
 
+@media (max-width:670px) {
+    .box-list {
+        flex-direction: row;
+    }
+    .box {
+        width:100%
+    }
+}
 
 @media (max-width: 530px) {
     .box img {
