@@ -7,7 +7,7 @@
     display: flex;
     justify-content:center;
     align-items:center;
-    background-image:url('https://cdn.pixabay.com/photo/2016/03/09/09/08/running-1245640_1280.jpg');
+    background-image:url('./src/bg1.jpg');
     background-position:center;
     background-size:cover;
     background-repeat:no-repeat
