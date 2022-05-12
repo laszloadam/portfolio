@@ -103,6 +103,9 @@ button{
     cursor: pointer;
     margin:10px 20px;
 }
+.gameBtns{
+    cursor: pointer;
+}
 .buttons{
     height: 200px;
     width: 140px;
