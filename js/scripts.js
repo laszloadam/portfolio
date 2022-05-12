@@ -1,4 +1,18 @@
 
+//pontozás a címben
+
+let dots = document.getElementById("dots");
+
+setInterval(
+    () => {
+        dots.innerHTML += '.';
+        if (dots.innerText=='....') {
+            dots.innerHTML = '';
+        }
+    }
+, 1000)
+
+
 //kinyitja a bal oldali beállításokat
 function optOpen() {
     let submenu = document.getElementById("submenu");
