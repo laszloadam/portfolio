@@ -51,11 +51,11 @@
        $(document).ready(function() {
 		   $("#games").click(function(){
 			   $("#gameSubWindow").load("inc/games.html");
-			   $("#gameSubWindow").css('height', 'calc(100% - 43px)')
+			   $("#gameSubWindow").css({'height': 'calc(100% - 40px)', 'visibility':'visible'})
 		   });
 		   $("#others").click(function(){
 			   $("#gameSubWindow").load("inc/others.html");
-			   $("#gameSubWindow").css('height', 'calc(100% - 43px)')
+			   $("#gameSubWindow").css({'height': 'calc(100% - 40px)', 'visibility':'visible'})
 		   });
 		   $("#cssBattle").click(function(){
 			   window.open("https://cssbattle.dev/player/laszloadam", "_blank");
