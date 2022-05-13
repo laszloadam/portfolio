@@ -44,6 +44,7 @@ body {
     background-size: 60%;
     background-repeat: no-repeat;
     background-position: 80% 15%;
+    height: calc(100vh - 250px);
     position: relative;
     margin: 20px;
     display: flex;
@@ -206,6 +207,7 @@ footer {
     .content {
         background-image:none;
         flex-direction: column;
+        height: calc(100vh - 180px);
     }
 
     nav {
