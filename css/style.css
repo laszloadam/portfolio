@@ -44,7 +44,6 @@ body {
     background-size: 60%;
     background-repeat: no-repeat;
     background-position: 80% 15%;
-    height: 45em;
     position: relative;
     margin: 20px;
     display: flex;
@@ -95,6 +94,10 @@ button:hover {
     background: var(--mainColor);
     box-shadow: 0 0 5px var(--mainColor);
     text-align: start;
+}
+button a {
+    color: #000000;
+    text-decoration: none;
 }
 main button:hover {
     filter: brightness(120%);
