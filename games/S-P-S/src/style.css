@@ -1,6 +1,9 @@
 body {
     background: #000;
     color: #FFF;
+    margin:0;
+    padding:20px;
+    box-sizing: border-box;
 }
 .gameBody{
     display: flex;
@@ -32,9 +35,11 @@ body {
 #infoBox {
     display: none;
     border: 5px solid #808080;
-    background-color: #000000;
+    background-color: rgba(0,0,0,.7);
+    backdrop-filter: blur(5px);
     border-radius: 30px;
     padding: 30px;
+    box-sizing: border-box;
     position: absolute;
     z-index: 1;
 }
@@ -71,8 +76,7 @@ h2 {
     justify-content: space-evenly;
 }
 #result {
-    min-width: 460px;
-    max-width:500px;
+    width: 500px;
     height: 300px;
     margin: 30px auto;
     padding: 20px;
@@ -82,6 +86,7 @@ h2 {
 }
 #result div {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
 }
 .playerHand {
@@ -115,8 +120,13 @@ legend {
     body {
         display: block;
     }
-    main {
+    .gameBody {
         width:100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .gameContent {
+        display: flex;
         flex-direction: column;
     }
     h1{
@@ -127,9 +137,8 @@ legend {
         display: none;
     }
     .playerHand {
-        max-width: 100%;
         margin: 5px;
-        text-align: none;
+        text-align: left;
         padding:5px
     }
     .playerHand img {
@@ -151,14 +160,19 @@ legend {
         margin-left:15%
     }
     #result {
+        width: 100%;
         min-width: 50px;
         height:200px
     }
     .resultHand {
-        display: none;
+        zoom: 50%;
     }
     #result div {
-        display: block;
+        display: flex;
+    }
+    #result div .resultHand {
+        
+        width: 130px;
     }
     #score {
         margin-top: 25px;
@@ -167,7 +181,8 @@ legend {
         height: 100%;
         width: 100%;
         border:0;
-        top:0
+        top:0;
+        left: 0;
     }
     #infoBox button {
         float: none;
