@@ -2,6 +2,7 @@
 .box-list {
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     height: calc(100% - 37px);
     overflow: auto;
     justify-content: space-between;
