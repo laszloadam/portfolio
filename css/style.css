@@ -37,6 +37,16 @@ body {
     line-height: 30px;
     margin: 0 20px;
     padding: 3px 56px;
+    display: flex;
+    justify-content: space-between;
+}
+.banner .logo {
+    font-size: 15px;
+    line-height: 12px;
+    letter-spacing: -2px;
+}
+.banner .logo .dots {
+    color: black;
 }
 
 .content {
