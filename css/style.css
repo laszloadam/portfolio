@@ -47,7 +47,7 @@ body {
     letter-spacing: -2px;
 }
 .banner .logo .dots {
-    color: black;
+    color: transparent;
 }
 
 .content {
@@ -215,6 +215,9 @@ footer {
 }
 
 @media (max-width: 960px) {
+    body {
+        padding:0
+    }
     .banner {
         line-height: normal;
     }
@@ -228,7 +231,7 @@ footer {
     .content {
         background-image:none;
         flex-direction: column;
-        height: calc(100vh - 250px);
+        height: calc(100vh - 200px);
         overflow: hidden;
     }
 
