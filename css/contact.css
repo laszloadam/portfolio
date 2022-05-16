@@ -28,6 +28,9 @@
 .contactLeft {
     padding-left:40px;
 }
+table {
+    width: 100%;
+}
 
 input,
 textarea {
@@ -114,6 +117,42 @@ input {
     .contactContent button {
         float: left;
         margin: 20px 10px;
+    }
+}
+
+@media (max-width:350px) {
+    .flexbox {
+        padding:10px
+    }
+    .contactLeft {
+        padding: 0px;
+        margin-bottom:20px;
+    }
+    .contactLeft tr {
+        display: flex;
+        flex-direction: column;
+    }
+    .contactLeft tr::after {
+        content: '';
+        display: block;
+        width: 100%;
+        border-bottom: 3px solid var(--mainColor);
+        margin-bottom:10px;
+    }
+    .contactLeft tr:last-child::after {
+        border: none;
+    }
+    .contactRight {
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+    }
+    .contactRight h1 {
+        margin:14px 0;
+        padding: 0px;
+    }
+    .contactContent {
+        padding: 0px;
     }
 }
 

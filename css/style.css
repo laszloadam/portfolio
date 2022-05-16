@@ -36,8 +36,7 @@ body {
 
 .banner {
     line-height: 30px;
-    margin: 0 20px;
-    padding: 3px 56px;
+    padding: 0px 56px;
     display: flex;
     justify-content: space-between;
 }
@@ -57,7 +56,6 @@ body {
     background-position: 80% 15%;
     height: calc(100vh - 250px);
     position: relative;
-    margin: 20px;
     display: flex;
 }
 
@@ -194,7 +192,7 @@ main p {
 }
 
 footer {
-    margin: 0 20px;
+    margin: 20px 0 0 0;
     height: 35px;
     background: var(--mainColor);
     padding: 10px;
@@ -219,19 +217,18 @@ footer {
         padding:20px 0 0 0
     }
     .banner {
-        line-height: normal;
+        padding: 0 20px 10px 20px;
     }
     .banner .text p {
         margin: 5px 0;
     }
     .banner .logo {
-        font-size: 10px;
-        line-height: 7px;
+        zoom: 80%;
     }
     .content {
         background-image:none;
         flex-direction: column;
-        height: calc(100vh - 200px);
+        height: calc(100vh - 260px);
         overflow: hidden;
     }
 
@@ -271,15 +268,13 @@ footer {
     main {
         width: 100%;
         height: calc(100% - 50px);
+        overflow: hidden;
         top:50px;
         position:absolute;
     }
 }
 
 @media (max-width: 530px) {
-    .banner{
-        padding:0;
-    }
     h1 {
         margin: 0px;
         padding: 10px;

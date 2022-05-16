@@ -133,6 +133,12 @@ img {
 }
 @media (max-width:350px) {
     .headers {
-        height: 60px;
+        font-size: 20px;
+    }
+    .otherList tr th:nth-child(2),
+    .otherList tr td:nth-child(2),
+    .otherList tr th:last-child,
+    .otherList tr td:last-child {
+        display: none;
     }
 }
