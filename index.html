@@ -7,7 +7,7 @@
 	<meta name="description" content="László Ádám portfolio page">
     <meta name="keywords" content="László Ádám, Front-end, webfejlesztő">
     <title>LA || Frontend Developer</title>
-    
+
 <!-- Og Tag-ek -->
     <meta property="og:title" content="LA || Frontend Developer" />
     <meta property="og:description" content="László Ádám portfolio page" />
@@ -38,13 +38,13 @@
         </div>
     </header>
     <div id="content" class="content">
-        <nav>
-            <div class="menu-btn">
+        <nav id="navigation" onmouseleave="menuClose()">
+            <div onclick="menuOpen()" class="menu-btn">
                 MENÜ
             </div>
-			<button id="main">Magamról</button>
-            <button id="referenc">Referencia</button>
-            <button id="contact">Kapcsolat</button>
+			<button onclick="menuClose()" id="main">Magamról</button>
+            <button onclick="menuClose()" id="referenc">Referencia</button>
+            <button onclick="menuClose()" id="contact">Kapcsolat</button>
             <hr>
 			<p class="online">&#9635; Online</p>
             <button id="options" onclick="optOpen()" onmouseleave="optClose()">Beállítások &#5125;

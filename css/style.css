@@ -241,11 +241,11 @@ footer {
         transition: height .4s;
         position: absolute;
     }
-
+/* 
     nav:hover {
         height: 20em;
         transition: height .4s;
-    }
+    } */
 
 
     .menu-btn {

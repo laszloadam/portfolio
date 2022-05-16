@@ -25,6 +25,21 @@ setInterval(
 , 1000)
 
 
+//menü legörgetés
+let menu = document.getElementById('navigation');
+
+function menuOpen() {
+    menu.style.height = '300px'
+
+};
+
+function menuClose() {
+    menu.style.height = '42px'
+}
+
+
+
+
 //kinyitja a bal oldali beállításokat
 function optOpen() {
     document.getElementById("submenu").style.transform="scale(1,1)";
