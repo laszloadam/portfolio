@@ -1,33 +1,27 @@
-.profile-image {
-    color: var(--mainColor);
-    font-size: .65em;
-    line-height: 1.3em;
-    margin-top: 30px;
-    width: 320px;
-    height: 380px;
-    border: none
-}
-
 .flexbox {
     padding:20px;
+    margin:3px;
     box-sizing: border-box;
     overflow: auto;
-    height: calc(100% - 37px);
+    height: calc(100% - 43px);
     display: flex;
+}
+
+.contactLeft {
+    margin:0 40px;
 }
 
 .contactRight {
     width: 100%;
     min-height: 350px;
+    height: fit-content;
     border: 3px solid var(--mainColor);
-    margin: 40px;
     padding: 20px;
-    text-align: right;
+}
+.contactRight h1 {
+    text-align: center;
 }
 
-.contactLeft {
-    padding-left:40px;
-}
 table {
     width: 100%;
 }
@@ -48,28 +42,45 @@ textarea {
     box-sizing: border-box;
     overflow: auto;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: end;
-    align-items: center;
 }
-.contactContent div {
+
+.contactContent .contactInputs {
+display: flex;
+flex-direction: column;
+width: 375px;
+margin-right:20px
+}
+
+.contactContent label {
+    display: block;
+    margin:0 0 20px 0;
+}
+
+.contactInputs input {
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+.contactContent .contactMessage {
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contactContent .contactMessage .message {
     width: 100%;
 }
 
+.contactContent .contactMessage textarea {
+    margin-bottom:10px;
+}
+
 .contactContent button {
-    float: right;
-    width: auto;
-    padding: 0;
-    margin: 20px;
-
+    padding: 3px;
 }
 
-input {
-    padding: 5px;
-    width: 50%;
-    margin-bottom: 15px;
-}
+
 
 @media (max-width:1180px) {
     .flexbox {
@@ -92,31 +103,23 @@ input {
 
 @media (max-width: 530px) {
 
-    label {
-        display: block;
-    }
+
     .contactLeft {
         padding-bottom:15px;
     }
     .contactRight {
         text-align: left;
         padding: 10px;
-        display: flex;
-        justify-items: center;
-        align-items: center;
     }
-
-    input,
-    textarea {
+    .contactRight h1 {
+        margin:14px 0;
+        padding: 0px;
+    }
+    .contactContent .contactInputs {
         width: 100%;
     }
-
-    .message {
-        float: none;
-    }
-    .contactContent button {
-        float: left;
-        margin: 20px 10px;
+    textarea {
+        width: 203px;
     }
 }
 
@@ -126,7 +129,7 @@ input {
     }
     .contactLeft {
         padding: 0px;
-        margin-bottom:20px;
+        margin:0 0 20px 0;
     }
     .contactLeft tr {
         display: flex;
@@ -146,10 +149,6 @@ input {
         padding: 0px;
         display: flex;
         flex-direction: column;
-    }
-    .contactRight h1 {
-        margin:14px 0;
-        padding: 0px;
     }
     .contactContent {
         padding: 0px;
