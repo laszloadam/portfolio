@@ -6,6 +6,9 @@
     overflow: auto;
     height: calc(100% - 37px);
 }
+img {
+    float: left;
+}
 
 h1 {
     margin:20px;
@@ -15,16 +18,4 @@ h1 {
 
 p {
     text-align: justify;
-}
-
-#hacking {
-    color: red;
-    padding: .3em .6em;
-    margin: 5px auto;
-}
-
-#hacking:hover {
-    cursor: pointer;
-    color: white;
-    background-color: red;
 }
