@@ -3,11 +3,14 @@
 console.log(window.innerWidth);
 
 let theme = window.localStorage.getItem('theme');
+let themeImg = window.localStorage.getItem('themeImg');
 if(theme != null) {
     document.documentElement.style.setProperty('--mainColor', theme)
+    document.getElementById("content").style.backgroundImage = "url('pics/"+themeImg+".png')";
 }
 else {
     document.documentElement.style.setProperty('--mainColor', '#18bb34');
+    document.getElementById("content").style.backgroundImage = "url('pics/cont_bg_green.png')";
 }
 
 //pontozás a címben
@@ -63,21 +66,21 @@ function optClose() {
 }
 
 function blue() {
-    window.localStorage.setItem('theme', '#09a8d8')
+    window.localStorage.setItem('theme', '#09a8d8');
+    window.localStorage.setItem('themeImg', 'cont_bg_blue');
     document.documentElement.style.setProperty('--mainColor', '#09a8d8');
-    document.documentElement.style.setProperty('--secondColor', '#137998');
     document.getElementById("content").style.backgroundImage = "url('pics/cont_bg_blue.png')";
     
 };
 function red() {
-    window.localStorage.setItem('theme', '#ff1f1f')
+    window.localStorage.setItem('theme', '#ff1f1f');
+    window.localStorage.setItem('themeImg', 'cont_bg_red');
     document.documentElement.style.setProperty('--mainColor', '#ff1f1f');
-    document.documentElement.style.setProperty('--secondColor', '#cc0000');
     document.getElementById("content").style.backgroundImage = "url('pics/cont_bg_red.png')";
 };
 function green() {
-    window.localStorage.setItem('theme', '#18bb34')
+    window.localStorage.setItem('theme', '#18bb34');
+    window.localStorage.setItem('themeImg', 'cont_bg_green');
     document.documentElement.style.setProperty('--mainColor', '#18bb34');
-    document.documentElement.style.setProperty('--secondColor', '#008000');
     document.getElementById("content").style.backgroundImage = "url('pics/cont_bg_green.png')";
 };
