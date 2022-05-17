@@ -8,7 +8,6 @@ if(theme != null) {
 }
 else {
     document.documentElement.style.setProperty('--mainColor', '#18bb34');
-    //document.documentElement.style.setProperty('--secondColor', '#008000');
 }
 
 //pontozás a címben
@@ -62,9 +61,6 @@ function optClose() {
     document.getElementById("submenu").style.transform="scale(0,1)";
 
 }
-
-
-//document.documentElement.style.setProperty('--your-variable', '#YOURCOLOR');
 
 function blue() {
     window.localStorage.setItem('theme', '#09a8d8')

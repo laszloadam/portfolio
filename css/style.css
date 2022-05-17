@@ -318,7 +318,6 @@ footer {
 .window {
     width: 30px;
     height: 100%;
-    transition-duration: .3s;
     overflow: hidden;
     cursor: pointer;
     display: flex;
@@ -326,8 +325,7 @@ footer {
     align-items: center;
         }
 .window:hover{
-    background-color: var(--secondColor);
-    transition-duration: .3s;
+    backdrop-filter: brightness(70%);
         }
 
 .minimal {
@@ -339,6 +337,12 @@ footer {
     overflow: hidden;
         }
 
+.closeWindow:hover {
+    background-color: #cb0e0e;
+}
+.closeWindow:hover > box-icon {
+    filter: invert(1);
+}
 /*------------------------*/
 
 #error{
