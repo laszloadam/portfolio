@@ -19,3 +19,8 @@ h1 {
 p {
     text-align: justify;
 }
+@media (max-width:530px) {
+    .mainContent img {
+        width: 100%;
+    }
+}

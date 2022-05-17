@@ -1,8 +1,8 @@
 //Téma szín
 
-let theme = window.localStorage.getItem('theme');
-console.log(theme);
+console.log(window.innerWidth);
 
+let theme = window.localStorage.getItem('theme');
 if(theme != null) {
     document.documentElement.style.setProperty('--mainColor', theme)
 }
@@ -29,12 +29,26 @@ setInterval(
 let menu = document.getElementById('navigation');
 
 function menuOpen() {
-    menu.style.height = '300px'
+    menu.style.height = 'fit-content'
 
 };
 
+window.addEventListener("resize", function () {
+    if (window.innerWidth < 960) {
+        menu.style.height = '42px'
+    }
+    else {
+        menu.style.height = 'fit-content'
+    }
+});
+
 function menuClose() {
-    menu.style.height = '42px'
+    if (window.innerWidth < 960) {
+        menu.style.height = '42px'
+    }
+    else {
+        menu.style.height = 'fit-content'
+    }
 }
 
 
