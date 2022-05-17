@@ -28,11 +28,7 @@ body {
     background: var(--mainColor);
     border-left: 4px solid black;
 }
-@media (max-width:960px) {
-    ::-webkit-scrollbar-thumb {
-        border: 4px solid black;
-    }
-}
+
 
 .banner {
     line-height: 30px;
