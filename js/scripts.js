@@ -84,3 +84,15 @@ function green() {
     document.documentElement.style.setProperty('--mainColor', '#18bb34');
     document.getElementById("content").style.backgroundImage = "url('pics/cont_bg_green.png')";
 };
+
+function downloadCV() {
+    var element = document.createElement('a');
+  element.setAttribute('href', '../src/Front-end_CV_magyar.pdf');
+  element.setAttribute('download', 'László_Ádám_CV.pdf');
+  element.style.display = 'none';
+  document.body.appendChild(element);
+
+  element.click();
+
+  document.body.removeChild(element);
+}

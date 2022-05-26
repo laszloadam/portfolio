@@ -358,3 +358,12 @@ footer {
     margin: 5px;
     width: 10em;
 }
+
+@media (max-height:800px) {
+    body {
+        zoom: 60%;
+    }
+    .content {
+        height: 100vh;
+    }
+}

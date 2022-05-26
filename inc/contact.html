@@ -49,8 +49,8 @@
 		</div>
 		<div class="contactRight">
 			<h1>Küldj üzenetet!</h1>
-			<!-- <form id="form" class="contactContent" action="https://formspree.io/f/mzbkagve"  method="post"> -->
-			<form class="contactContent" method="post">
+			<form id="form" class="contactContent" action="https://formspree.io/f/mzbkagve"  method="post" onsubmit="event.preventDefault()">
+			<!-- <form class="contactContent" method="post"> -->
 				
 				<div class="contactInputs">
 					<label for="name">Teljes név: </label>
@@ -64,7 +64,7 @@
 					<label class="message" for="uzenet">Üzenet: </label>
 					<textarea id="uzenet" name="uzenet" cols="40" rows="15" required></textarea>
 					<button type="reset">[ Reset ]</button>			
-					<button id="submitBtn">[ Küldés ]</button>
+					<button type="submit">[ Küldés ]</button>
 				</div>
 			</form>
 		</div>
