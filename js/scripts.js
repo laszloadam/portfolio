@@ -72,11 +72,11 @@ function blue() {
     document.getElementById("content").style.backgroundImage = "url('pics/cont_bg_blue.png')";
     
 };
-function red() {
-    window.localStorage.setItem('theme', '#ff1f1f');
-    window.localStorage.setItem('themeImg', 'cont_bg_red');
-    document.documentElement.style.setProperty('--mainColor', '#ff1f1f');
-    document.getElementById("content").style.backgroundImage = "url('pics/cont_bg_red.png')";
+function white() {
+    window.localStorage.setItem('theme', '#dbdbdb');
+    window.localStorage.setItem('themeImg', 'cont_bg_white');
+    document.documentElement.style.setProperty('--mainColor', '#dbdbdb');
+    document.getElementById("content").style.backgroundImage = "url('pics/cont_bg_white.png')";
 };
 function green() {
     window.localStorage.setItem('theme', '#18bb34');
