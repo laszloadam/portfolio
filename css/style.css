@@ -99,7 +99,6 @@ button:hover {
     color: black;
     background: var(--mainColor);
     box-shadow: 0 0 5px var(--mainColor);
-    text-align: start;
 }
 button a {
     color: #000000;
@@ -121,7 +120,7 @@ main button:hover {
     transform-origin: left;
     margin-left: 10px;
 }
-#blue, #red, #green {
+#blue, #white, #green {
     cursor: pointer;
     border: 1px solid black;
     display: inline-block;
@@ -326,7 +325,7 @@ footer {
 
 .minimal {
     position: absolute;
-    height:2em;
+    height:40px;
     width:26em;
     left:255px;
     bottom:0px;
@@ -361,9 +360,15 @@ footer {
 
 @media (max-height:800px) {
     body {
-        zoom: 60%;
+        zoom: 70%;
     }
     .content {
         height: 100vh;
+    }
+}
+
+@media (max-height:560px) {
+    body {
+        zoom: 60%;
     }
 }

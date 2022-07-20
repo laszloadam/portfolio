@@ -1,7 +1,5 @@
 //Téma szín
 
-console.log(window.innerWidth);
-
 let theme = window.localStorage.getItem('theme');
 let themeImg = window.localStorage.getItem('themeImg');
 if(theme != null) {

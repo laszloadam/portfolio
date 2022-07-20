@@ -5,7 +5,7 @@
     flex-wrap: wrap;
     height: calc(100% - 37px);
     overflow: auto;
-    justify-content: space-between;
+    justify-content: space-evenly;
     background-color: #000000;
     border: 3px solid #000;
 }
@@ -38,6 +38,9 @@
 
 
 .box-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height:200px;
     position: relative;
     border: 2px solid var(--mainColor);
@@ -55,7 +58,6 @@
     background: var(--mainColor);
     color: black;
     box-shadow: 0 0 5px var(--mainColor);
-    margin: 15px;
 }
 
 #gameSubWindow {
