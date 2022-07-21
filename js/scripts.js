@@ -89,6 +89,7 @@ function downloadCV() {
   element.setAttribute('download', 'Laszlo_Adam_CV');
   element.style.display = 'none';
   document.body.appendChild(element);
+  console.log(document.body);
 
   element.click();
 
