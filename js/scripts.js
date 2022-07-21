@@ -85,13 +85,9 @@ function green() {
 
 function downloadCV() {
     var element = document.createElement('a');
-  element.setAttribute('href', '../src/Front-end_CV_magyar.pdf');
+  element.setAttribute('href', './src/Front-end_CV_magyar.pdf');
   element.setAttribute('download', 'Laszlo_Adam_CV');
-  //element.style.display = 'none';
   document.body.appendChild(element);
-  console.log(document.body);
-
   element.click();
-
-  //document.body.removeChild(element);
+  document.body.removeChild(element);
 }
