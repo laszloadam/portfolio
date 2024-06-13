@@ -38,7 +38,7 @@
 				</tr>
                 <tr>
                     <td>Mobil: </td>
-                    <td><a href="tel:+36302096013">+36/30 20 96 013</a></td>
+                    <td><a href="tel:+36302749444">+36 30 274 9444</a></td>
                 </tr>
 				<tr>
 					<td>CV: </td>
@@ -76,54 +76,6 @@
 		</div>
 	</div>
 	<script src="https://smtpjs.com/v3/smtp.js">
-	</script>
-	<script>
-
-
-
-		var submitBtn = document.getElementById('submitBtn');
-
-		submitBtn.addEventListener('click', function(event){
-			let name = document.getElementById('name').value;
-			let mail = document.getElementById('mail').value;
-			let targy = document.getElementById('targy').value;
-			let uzenet = document.getElementById('uzenet').value;
-			let body= `név: ${name} <br>email: ${mail} <br>tárgy: ${targy} <br>üzenet: ${uzenet}`
-			event.preventDefault();
-			
-			Email.send({
-				Host : "smtp.gmail.com",
-				Username : "la08.developer@gmail.com",
-				Password : "B3C71ED920BAA1F466091AE0EB80077397A0",
-				To : 'laszloadam08@gmail.com',
-				From : 'laszloadam08@gmail.com',
-				Subject : "This is the subject",
-				Body : body
-			}).then(
-			message => {
-				if(message=='OK') {
-					console.log(body);
-					alert('üzenet elküldve')
-				}
-				else {
-					console.log(body);
-					alert('Valami baj van')
-					console.log(message);
-				}
-			}
-			);
-		})
-
-		// function sendEmail() {
-		// 	let name = document.getElementById('name').value;
-		// 	let mail = document.getElementById('mail').value;
-		// 	let targy = document.getElementById('targy').value;
-		// 	let message = document.getElementById('message').value;
-
-		// 	let body= "body"
-
-			// 
-	//	}
 	</script>
 </body>
 </html>
